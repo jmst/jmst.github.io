@@ -1,0 +1,3217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-11-02 Thu 01:06 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orge836ac5">1. etymology</a></li>
+<li><a href="#org03a55f0">2. shopping list</a>
+<ul>
+<li><a href="#org303c444">2.1. clothes</a></li>
+</ul>
+</li>
+<li><a href="#org93a580c">3. <span class="todo TODO">TODO</span> broken opening txt with emacs</a></li>
+<li><a href="#org413dd53">4. <span class="todo TODO">TODO</span> learn regexp</a></li>
+<li><a href="#orgae7a060">5. <span class="todo TODO">TODO</span> browser history feb-</a></li>
+<li><a href="#org903447a">6. media</a>
+<ul>
+<li><a href="#org5691f95">6.1. genres</a></li>
+<li><a href="#orgd3aa1d0">6.2. directors</a>
+<ul>
+<li><a href="#orge2ec9a2">6.2.1. animation</a></li>
+<li><a href="#org57d0305">6.2.2. web</a></li>
+</ul>
+</li>
+<li><a href="#orgddec4c5">6.3. film</a>
+<ul>
+<li><a href="#orgf4ede9c">6.3.1. christmas</a></li>
+<li><a href="#orgbb6d604">6.3.2. interactive</a></li>
+</ul>
+</li>
+<li><a href="#org1f6beed">6.4. play</a></li>
+<li><a href="#org015f0a7">6.5. shows</a>
+<ul>
+<li><a href="#orgd395096">6.5.1. tv</a></li>
+<li><a href="#org9784fa8">6.5.2. audio</a></li>
+</ul>
+</li>
+<li><a href="#orgba1aa0f">6.6. web</a>
+<ul>
+<li><a href="#org7a768ba">6.6.1. watch later</a></li>
+<li><a href="#org8bf5e97">6.6.2. comic</a></li>
+</ul>
+</li>
+<li><a href="#org240f595">6.7. art</a>
+<ul>
+<li><a href="#orgde149b6">6.7.1. animations</a></li>
+<li><a href="#orgef66aa8">6.7.2. paintings</a></li>
+<li><a href="#orgf2e9d41">6.7.3. photography</a></li>
+<li><a href="#org7b9d754">6.7.4. mark ferrari</a></li>
+<li><a href="#org2787ce5">6.7.5. period</a></li>
+</ul>
+</li>
+<li><a href="#orgfc9fcaf">6.8. games</a>
+<ul>
+<li><a href="#orge8d8675">6.8.1. studios</a></li>
+<li><a href="#org331ae33">6.8.2. non-steam</a></li>
+<li><a href="#orgd870e17">6.8.3. currently playing</a></li>
+</ul>
+</li>
+<li><a href="#org944796b">6.9. painters</a></li>
+</ul>
+</li>
+<li><a href="#org85a768b">7. music</a>
+<ul>
+<li><a href="#org9b0a7ab">7.1. genres</a></li>
+<li><a href="#org111d3ac">7.2. artists</a>
+<ul>
+<li><a href="#org25e9943">7.2.1. not listened</a></li>
+</ul>
+</li>
+<li><a href="#orgd4088af">7.3. albums</a></li>
+<li><a href="#org89ae8ed">7.4. mixes</a></li>
+<li><a href="#org22186ab">7.5. composers</a>
+<ul>
+<li><a href="#orge203fa7">7.5.1. games</a></li>
+</ul>
+</li>
+<li><a href="#org64d7593">7.6. label</a></li>
+<li><a href="#org6fe8396">7.7. songs</a>
+<ul>
+<li><a href="#org807a1d6">7.7.1. to listen</a></li>
+<li><a href="#org2732b23">7.7.2. christmas</a></li>
+<li><a href="#orgd9d6d89">7.7.3. jazz</a></li>
+</ul>
+</li>
+<li><a href="#org3075ef6">7.8. games</a>
+<ul>
+<li><a href="#org2a3f0f4">7.8.1. mods</a></li>
+</ul>
+</li>
+<li><a href="#org48511e6">7.9. film</a></li>
+<li><a href="#org6c6f4fe">7.10. tv</a></li>
+<li><a href="#orgb3e245e">7.11. spotify playlists</a></li>
+<li><a href="#org9e71993">7.12. videos</a></li>
+</ul>
+</li>
+<li><a href="#org6e7ac0b">8. notes</a>
+<ul>
+<li><a href="#orga563833">8.1. todo</a></li>
+<li><a href="#orgcb877df">8.2. synchronicity</a></li>
+<li><a href="#org2479155">8.3. aberystwyth</a></li>
+<li><a href="#orgcd5e63f">8.4. youtube comments</a></li>
+</ul>
+</li>
+<li><a href="#orgdce4ada">9. projects</a>
+<ul>
+<li><a href="#org0dc55ab">9.1. github</a></li>
+<li><a href="#org7061e25">9.2. emacs</a>
+<ul>
+<li><a href="#org702fb33">9.2.1. org</a></li>
+</ul>
+</li>
+<li><a href="#orgd69d818">9.3. hammer</a></li>
+<li><a href="#org13a811c">9.4. gaming</a></li>
+<li><a href="#org9111870">9.5. fractals</a></li>
+<li><a href="#orgfa41fb8">9.6. blender</a></li>
+<li><a href="#org10f1dce">9.7. ipod video</a></li>
+<li><a href="#orgb1da720">9.8. nintendont</a></li>
+<li><a href="#org42f7b46">9.9. clip jam</a></li>
+<li><a href="#org5176030">9.10. kindle</a></li>
+<li><a href="#orgdadab20">9.11. ps2</a>
+<ul>
+<li><a href="#org6fa5d37">9.11.1. graphics</a></li>
+</ul>
+</li>
+<li><a href="#org9903565">9.12. shorthand</a></li>
+</ul>
+</li>
+<li><a href="#org95e302a">10. writing ideas</a>
+<ul>
+<li><a href="#org38d2d85">10.1. doing things differently</a></li>
+</ul>
+</li>
+<li><a href="#org1c1c76f">11. reading</a>
+<ul>
+<li><a href="#org1b4335d">11.1. books</a></li>
+<li><a href="#org42a016e">11.2. resource ebooks</a>
+<ul>
+<li><a href="#orgd952504">11.2.1. score</a></li>
+<li><a href="#org8fe9fdb">11.2.2. struthless lifechanging books</a></li>
+<li><a href="#orgc6b904b">11.2.3. short</a></li>
+<li><a href="#org5584a8c">11.2.4. utopian fiction</a></li>
+</ul>
+</li>
+<li><a href="#orgc1c7e70">11.3. manga</a></li>
+<li><a href="#orge83cfbe">11.4. authors</a>
+<ul>
+<li><a href="#org46ca2a7">11.4.1. cartoonists</a></li>
+</ul>
+</li>
+<li><a href="#orgb646868">11.5. publishers</a></li>
+<li><a href="#org30a3918">11.6. blogs</a>
+<ul>
+<li><a href="#orgda99c12">11.6.1. gaming</a></li>
+</ul>
+</li>
+<li><a href="#org8f36912">11.7. twitter</a></li>
+<li><a href="#org6d15114">11.8. articles</a>
+<ul>
+<li><a href="#org080f0cd">11.8.1. wikipedia</a></li>
+</ul>
+</li>
+<li><a href="#orgc237e6e">11.9. redacted.ch</a></li>
+<li><a href="#orgbc35323">11.10. sites</a>
+<ul>
+<li><a href="#orgcb35b52">11.10.1. instagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org68fbf25">12. read</a>
+<ul>
+<li><a href="#org3e2085a">12.1. quora</a></li>
+<li><a href="#org7b5576c">12.2. reddit</a></li>
+<li><a href="#org9f2965e">12.3. quotes</a></li>
+</ul>
+</li>
+<li><a href="#org2fd1040">13. sites</a>
+<ul>
+<li>
+<ul>
+<li><a href="#orgc30afe6">13.0.1. docs</a></li>
+<li><a href="#orgded1f51">13.0.2. subreddits</a></li>
+<li><a href="#org8bd8e49">13.0.3. video archive</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org45f0492">14. software</a>
+<ul>
+<li><a href="#org93993be">14.1. mac</a></li>
+<li><a href="#org04fda89">14.2. emacs packages</a></li>
+<li><a href="#org8a5e3d8">14.3. mpv archive</a>
+<ul>
+<li><a href="#org6ad51b3">14.3.1. scripts</a></li>
+<li><a href="#orgcea08b0">14.3.2. script modules</a></li>
+</ul>
+</li>
+<li><a href="#org1917a6a">14.4. animation</a></li>
+</ul>
+</li>
+<li><a href="#org91e2722">15. scripts</a>
+<ul>
+<li><a href="#org78e728f">15.1. imagemagick</a></li>
+<li><a href="#org3652994">15.2. yt-dlp</a></li>
+<li><a href="#org53120cd">15.3. ffmpeg</a></li>
+</ul>
+</li>
+<li><a href="#org6734049">16. people</a>
+<ul>
+<li><a href="#orgbf5174b">16.1. comedians</a></li>
+</ul>
+</li>
+<li><a href="#org6e9e221">17. food</a></li>
+<li><a href="#orgb1350b1">18. shoes</a></li>
+<li><a href="#orgaaf2f1e">19. elisp</a></li>
+<li><a href="#org254f9c1">20. emacs</a></li>
+<li><a href="#orga4a9acd">21. org</a></li>
+<li><a href="#org8fe0248">22. firefox</a>
+<ul>
+<li><a href="#org13405c2">22.1. ?</a></li>
+<li><a href="#org8eae0e7">22.2. extension</a></li>
+</ul>
+</li>
+<li><a href="#orgbda8457">23. instruments</a>
+<ul>
+<li><a href="#orge5ca65a">23.1. piano</a>
+<ul>
+<li><a href="#org5f4b06a">23.1.1. Super Mario Galaxy</a></li>
+<li><a href="#org09c96e6">23.1.2. Taioo</a></li>
+<li><a href="#org1ae7e0a">23.1.3. sites</a></li>
+</ul>
+</li>
+<li><a href="#org6a155c7">23.2. guitar</a>
+<ul>
+<li><a href="#org5954dff">23.2.1. tabs</a></li>
+</ul>
+</li>
+<li><a href="#org83b6e4c">23.3. DAW</a></li>
+</ul>
+</li>
+<li><a href="#orgfe47f93">24. Mysticism</a></li>
+<li><a href="#org6141c94">25. talks</a></li>
+<li><a href="#orgcc62a5b">26. blender</a>
+<ul>
+<li><a href="#orgaaf40de">26.1. rename bones in selection order?</a></li>
+</ul>
+</li>
+<li><a href="#org735413a">27. OBS</a></li>
+<li><a href="#org1d2bff2">28. words</a></li>
+<li><a href="#org8d4dfa3">29. history/good</a>
+<ul>
+<li><a href="#org8abea8f">29.1. film</a>
+<ul>
+<li><a href="#orga85eb14">29.1.1. audio</a></li>
+<li><a href="#orgff365a6">29.1.2. youtube videos</a></li>
+<li><a href="#orga5472db">29.1.3. twitter</a></li>
+<li><a href="#org3b14a34">29.1.4. clips</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+Watch Later formatted with channel name, elfeed integration?
+odysee ancestralcult
+rumble russel<sub>brand</sub> leafyishere
+<a href="https://youtu.be/wRDRj9fji74?t=564">https://youtu.be/wRDRj9fji74?t=564</a>
+parse json youtube comments
+disqus comments scraper -&gt; read mode
+</p>
+
+<p>
+steam skin no-tifications, no what's new
+</p>
+
+<p>
+<a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Invisible-Text.html#Invisible-Text">https://www.gnu.org/software/emacs/manual/html_node/elisp/Invisible-Text.html#Invisible-Text</a>
+p2 non-nil bolding messed up, maybe contact someone lol :)
+</p>
+
+<p>
+image stabilization binoculars
+When the Gazelle gets away from the Lion they shake profusely to get rid of the fear. There’s an African dance that replicates this.
+</p>
+<div id="outline-container-orge836ac5" class="outline-2">
+<h2 id="orge836ac5"><span class="section-number-2">1.</span> etymology</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+lemniscate ∞ - "decorated with ribbons", Lemnos-ish wool ribbon
+</p>
+</div>
+</div>
+<div id="outline-container-org03a55f0" class="outline-2">
+<h2 id="org03a55f0"><span class="section-number-2">2.</span> shopping list</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+audio interface (scarlett solo 3 PDsale)
+lavalier microphone - if mount to monitor (RODE PDsale)
+ipod shuffle
+</p>
+<ul class="org-ul">
+<li>(+<a href="https://github.com/nims11/IPod-Shuffle-4g">https://github.com/nims11/IPod-Shuffle-4g</a> - foo<sub>dop</sub> ruins order?)</li>
+<li>aac chapters to help fast-forward</li>
+<li>2010 MC, 2012 MD, 2015 MK / MKMG2LL/A silver</li>
+</ul>
+<p>
+ryzen 7600x free starfield £200
+<del>Koorui 24E3</del> Asus 540Hz w/ ULMB 2?
+? Philips Xenium X1560 (russia)
+OSTENT psx/2 + 360 + ddr to pc
+PSP battery (OSTENT?)
+Hobonichi Techo Journal
+</p>
+</div>
+<div id="outline-container-org303c444" class="outline-3">
+<h3 id="org303c444"><span class="section-number-3">2.1.</span> clothes</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+aphex shirt
+blender shirt
+blender UV socks
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org93a580c" class="outline-2">
+<h2 id="org93a580c"><span class="section-number-2">3.</span> <span class="todo TODO">TODO</span> broken opening txt with emacs</h2>
+</div>
+<div id="outline-container-org413dd53" class="outline-2">
+<h2 id="org413dd53"><span class="section-number-2">4.</span> <span class="todo TODO">TODO</span> learn regexp</h2>
+</div>
+<div id="outline-container-orgae7a060" class="outline-2">
+<h2 id="orgae7a060"><span class="section-number-2">5.</span> <span class="todo TODO">TODO</span> browser history feb-</h2>
+</div>
+<div id="outline-container-org903447a" class="outline-2">
+<h2 id="org903447a"><span class="section-number-2">6.</span> media</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Adyashanti
+</p>
+</div>
+<div id="outline-container-org5691f95" class="outline-3">
+<h3 id="org5691f95"><span class="section-number-3">6.1.</span> genres</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+mumblecore (Greta Gerwig)
+</p>
+</div>
+</div>
+<div id="outline-container-orgd3aa1d0" class="outline-3">
+<h3 id="orgd3aa1d0"><span class="section-number-3">6.2.</span> directors</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+Takeshi Kitano
+Panos Cosmatos
+Terrence Malick
+Michael Mann
+David Fincher
+</p>
+</div>
+<div id="outline-container-orge2ec9a2" class="outline-4">
+<h4 id="orge2ec9a2"><span class="section-number-4">6.2.1.</span> animation</h4>
+<div class="outline-text-4" id="text-6-2-1">
+<p>
+Ray Harryhausen
+<a href="https://cessen.com/">Nathan Vegdahl</a>
+urchin/freefac (blenderheads - Bassam Kurdali, Fateh Slavtisky-Osment, Chris Bishop, previously Pablo Vazquez)
+? autodesk alias+xsi short films?
+Duck Dodgers in the 24½th Century
+Goopy Gear
+Yuri Norstein and Francheska Yarbusova
+</p>
+</div>
+</div>
+<div id="outline-container-org57d0305" class="outline-4">
+<h4 id="org57d0305"><span class="section-number-4">6.2.2.</span> web</h4>
+<div class="outline-text-4" id="text-6-2-2">
+<p>
+hotdiggedydemon - Brain Dump
+An Egg's Guide to Minecraft
+<a href="https://www.youtube.com/playlist?list=PL7bsYHsRUfm5MSVRB_HXMbj6DlWLNNmqb">Bioshock Infinite: The Prophet of History</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgddec4c5" class="outline-3">
+<h3 id="orgddec4c5"><span class="section-number-3">6.3.</span> film</h3>
+<div class="outline-text-3" id="text-6-3">
+<p>
+ravenous 1999
+soylent green
+the day after
+when the wind blows
+barbarella
+forbidden planet
+A Knight's Tale (heath ledger)
+delicatessen
+jean de florette
+manon de sauce
+night on earth
+the big easy
+cape fear
+raging bull
+when we were kings
+white men can't jump
+hoop dreams
+raise the red lantern
+cinema paradiso
+hamon hamon
+my beautiful laundret
+shindlers list
+unforgiven
+dirty harry
+good bad ugly
+true grit
+silent running
+midnight run
+budapest hotel
+secret of nimh
+the legend of 1900
+trance
+the drop
+swordfish
+thank you for smoking
+casablanca
+all about eve
+the apartment
+sound of music
+french connection
+hurt locker
+manchester by the sea
+wag the dog
+pacific rim
+42 (harrison ford)
+as good as it gets
+aviator
+insideman
+bringing up baby
+roman holiday
+breakfast at tiffanys
+singing in the rain
+coneheads
+laurence of arabia
+playtime 1967
+city lights
+the grandmaster
+southland tales
+chungking express
+observe and report
+apocalypto
+donnie brasco
+blue is the warmest colour
+the way of the gun
+wheelman
+locke
+oldboy
+last starfighter
+the good things (will wheaton)
+theh razor's edge
+the descent (cave movie)
+the thomas crown affair
+george orwell: a life in pictures
+brothers 2009 toby maguire
+amadeus
+a fish called wanda
+In the Mouth of Madness
+The Whisperer in Darkness (Del Toro)
+Un Chien Andalou (1929)
+walkabout (1971)
+The King and the Mockingbird
+The Wing or the Thigh
+The Town (Ben Affleck)
+Transcendence (2014)
+Until the end of the world (1991)
+The War Game
+The Day After
+Threads
+Taking Tiger Mountain (1983)
+Pontypool (2008)
+V/H/S (2012)
+<a href="https://en.wikipedia.org/wiki/Saludos_Amigos">https://en.wikipedia.org/wiki/Saludos_Amigos</a>
+The Man Who Laughs (1928)
+Waking Life (2001)
+Chantal Akerman - News From Home
+Gattaca (1997)
+The Last Unicorn (1982)
+The Hobbit (1977)
+The Witch (2015)
+Flight of the Navigator
+EMESIS BLUE
+The NeverEnding Story
+The Hills Have Eyes
+The King of Comedy
+Don't Look Now
+Black Orpheus
+The League of Gentlemen's Apocalypse
+John Q.
+Heart of Darkness (1958)
+The Adventure sof Buckaroo Banazi Across the 8th Dimension
+Hackers (1995
+The Devil's Backbone (Guillermo Del Toro)
+Prisoners (denis vellinvenue)
+Big Nothing (Schwimmer &amp; Pegg)
+The Music Man ("Ya Got Trouble" - monorail simpsons)
+Barefoot (2014) [cheesy romcom]
+Rare Beasts (Billie Piper)
+<a href="https://www.youtube.com/watch?v=HKjxpfwjBtw">The Cat With Hands</a>
+This is the end (seth rogan, etc.)
+The Thing (commentary)
+Somewhere In Dreamland (Animation Anthology - Max Fliescher)
+Three and Out (Mackenzie Crook)
+The Swedish Theory of Love
+Fire in the Sky
+Oliver Stone - The Hand
+One Million Years B.C. (1966)
+The Man From Earth: Holocene
+Love &amp; Mercy (2014)
+Colossus: The Forbin Project
+The Devil Wears Prada
+Past Lives
+Da 5 Bloods
+The Number 23 (Jim Carrey)
+Ladri di biciclette (1948)
+Le voyage dans la lune (1902)
+Waco: The Rules Of Engagement
+Night of the Hunter
+Near Dark (1987)
+The Simpsons: America's First Family
+My Wasted Life (Matt Groening)
+The Lost Boys
+The Others
+Jesus Rolls
+Irréversible (2002)
+Commando (1986)
+Natural Born Killers
+La Bamba
+Bad Boys (1983)
+After Dark My Sweet
+Glengarry Glen Ross
+Nil By Mouth
+Freaks (1932)
+Naked (1993)
+The Poughkeepsie Tapes (2007)
+My Wrongs #8245-8249 &amp; 117 (Chris Morris)
+Molly's Game (2017)
+The Skin I Live In
+Hackers: Wizards of the Electronic Age (1985)
+Cure (1997)
+Show Boat (1927) [Futurama - Fear of a Bot Planet]
+Yentl (1983) [Barbara Streisand, Futurama - Fear of a Bot Planet]
+A Brighter Summer Day (1991)
+Cashback (2006)
+The Dreamers (2003)
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="orge85f09d"></a>studio<br />
+<div class="outline-text-5" id="text-6-3-0-1">
+<p>
+Warp Films 
+</p>
+</div>
+</li>
+</ol>
+<div id="outline-container-orgf4ede9c" class="outline-4">
+<h4 id="orgf4ede9c"><span class="section-number-4">6.3.1.</span> christmas</h4>
+<div class="outline-text-4" id="text-6-3-1">
+<p>
+Le Père Noël est une ordure (1982)
+</p>
+</div>
+</div>
+<div id="outline-container-orgbb6d604" class="outline-4">
+<h4 id="orgbb6d604"><span class="section-number-4">6.3.2.</span> interactive</h4>
+<div class="outline-text-4" id="text-6-3-2">
+<p>
+The Document of Metal Gear Solid 2 (PS2)
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org1f6beed" class="outline-3">
+<h3 id="org1f6beed"><span class="section-number-3">6.4.</span> play</h3>
+<div class="outline-text-3" id="text-6-4">
+<p>
+Cyrano de Bergerac
+Waiting for Godot
+</p>
+</div>
+</div>
+<div id="outline-container-org015f0a7" class="outline-3">
+<h3 id="org015f0a7"><span class="section-number-3">6.5.</span> shows</h3>
+<div class="outline-text-3" id="text-6-5">
+</div>
+<div id="outline-container-orgd395096" class="outline-4">
+<h4 id="orgd395096"><span class="section-number-4">6.5.1.</span> tv</h4>
+<div class="outline-text-4" id="text-6-5-1">
+<p>
+little drummer girl
+informer
+miss masel
+devilman
+Mononoke
+raised by wolves
+<a href="https://www.youtube.com/playlist?list=PLIj4BzSwQ-_sfc7l2xm1wQswAd5jqrrDS">journey to the west</a>
+monkey dust
+nathan barley
+person of interest
+warehouse 13
+Belle and Sebastian (1965)
+Green Wing
+Julia Davis (Human Remains, Hunderby, Sally 4 Ever, Camping)
+Man to Man with Dean Learner
+Modern Toss (comic)
+15 Storeys High
+Moral Orel
+<a href="https://en.wikipedia.org/wiki/The_Galaxy_Being">https://en.wikipedia.org/wiki/The_Galaxy_Being</a>
+Andromeda
+Fraggle Rock
+Bowery Bugs (Warner Bros)
+M.R. James: Ghost Writer (Mark Gatiss)
+Home Movies (animated)
+Lost in Space
+Small Soldiers
+Doug (nickoldean 'Zap Brannigan is a grown up Doug Funny')
+The Adventures of Rocky and Bullwinkle and Friends (Groening - Bullwinkle <b>J.</b> Moose, Jay Ward)
+Bluestone 42 (IT Crowd 50/50 guy)
+The Last Dance (Michael Jordan, ElMaxo rec)
+Little Nightmares (unreleased)
+Dan Dare: Pilot of the Future (kids animation?)
+ZORRA TOTAL (brazilian comedy, Whang! comment section)
+Due South
+Northern Exposure
+The Hunt for a Killer
+The White Lotus
+Succession
+Halt and Catch Fire (Mackenzie Davis)
+The Young Ones
+Æon Flux (1991)
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org0330a54"></a>writers<br /></li>
+<li><a id="org4b3e04c"></a>doctor who<br />
+<div class="outline-text-5" id="text-6-5-1-2">
+<p>
+Robert Shearman
+Matthew Graham
+Paul Cornell (Human Nature - book)
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org9784fa8" class="outline-4">
+<h4 id="org9784fa8"><span class="section-number-4">6.5.2.</span> audio</h4>
+<div class="outline-text-4" id="text-6-5-2">
+<p>
+the ricky gervais show
+Welcome to Night Vale
+<a href="https://www.randelshofer.ch/animations/index.html">https://www.randelshofer.ch/animations/index.html</a>
+<a href="https://theconvivialsociety.substack.com/p/you-cant-optimize-for-rest#details">https://theconvivialsociety.substack.com/p/you-cant-optimize-for-rest#details</a>
+Simon's Perculiar Portions (maybe)
+The Twilight Zone Podcast
+The Magnus Archives (maybe)
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgba1aa0f" class="outline-3">
+<h3 id="orgba1aa0f"><span class="section-number-3">6.6.</span> web</h3>
+<div class="outline-text-3" id="text-6-6">
+</div>
+<div id="outline-container-org7a768ba" class="outline-4">
+<h4 id="org7a768ba"><span class="section-number-4">6.6.1.</span> watch later</h4>
+<div class="outline-text-4" id="text-6-6-1">
+<p>
+Did Morrowind on the Original XBOX really reboot itself to free memory ？ ｜ MVG [x0TKwPnHc-M]
+I ran Star Citizen out of THIS&#x2026; [85B2qZWBpF8]
+Playstation 2 Startup Sound Explained [tgsxzXm5ZPM]
+Why Pipe Organs Sound Scary [WT934eTbmuY]
+A drive through central London - August 1999 [EI04Dd3zzO8]
+UDhVV1BAmgI, Big Boss - The Man Who (Almost) Saved the World
+65xLByzT1l0, CGI 3D Animated Short "I, Pet Goat II" by - Heliofant
+UHP7G6PKoPA, de<sub>prime</sub> - How Far from the Source can it get?
+BIauSQ<sub>hIgo</sub>, DF Retro: The Making of Doom on Super NES - The Original 'Impossible Port'&#x2026;?
+kXVjCRIqS4c, GNU's Not UNIX: Why Emacs Demonstrates The UNIX Philosophy Isn't Always The Only Answer -Daniel Rose
+zIFWO7omRpQ, John Doran on Aphex Twin
+ISUcieUda1U, Meta's Futuristic VR Designs, Summarised
+mz1gbbbEFI4, Prey (2017) - The Most Underrated Game Ever?
+UH4jaJzmrWU&amp;t=572s, Ricky Gervais at the Golden Globes (2010-12)
+JRWQN7bieP4, That man singing doesn't exist
+kCyZrwqDTd8, The Crimes of Big Boss
+k0<sub>GqZcbwKE</sub>, The Harry Potter Recorder—Richard Harvey
+fiw6GEb1JOk, Making the most of the guitar in Opaline: Chords and motions
+Ulaye<sub>qVwTY</sub>, BBC trade test transmission film - guide for colour TV
+t<sub>rzYnXEQlE</sub>, FIXING the ENTIRE SM64 Source Code (INSANE N64 performance)
+Gc0YlQS3Rx4, The Final Days of EVGA's GPU Division: Building the Last Video Card
+ox5kpR0otpM, Which “money personality” are you Your Brain on Money
+nWlwi3rUumA, The Trains of Team Fortress 2
+z28d9y4VFaw, The Medic gets teleported to another reality (TF2 15 ai Gmod Animation)
+LattfGKNr-E, A Look at LittleBigPlanet's Music
+KowaML7VHT0, The Peril of Orgy-Porgy Religion
+iLbbpRYRW5Y, The Odds of Life and Intelligence - YouTube
+George Lucas Project Happiness Interview
+Batman vs. The Penguin (with Patton Oswalt)
+Flathead Lake &amp; Giant Fish [American Terrors]
+Hang with u m a m i ~ Animating in Photoshop
+Emacs Org-mode - a system for note-taking and project planning - Google TechTalks
+<a href="https://www.newyorker.com/culture/screening-room/grappling-with-mental-illness-in-secret-in-tallahassee">https://www.newyorker.com/culture/screening-room/grappling-with-mental-illness-in-secret-in-tallahassee</a>
+<a href="https://www.adsoftheworld.com/campaigns/smoking-animals">https://www.adsoftheworld.com/campaigns/smoking-animals</a>
+The Magical Origins of Walt Disney Pictures | Corporate Casket
+Half-Life VR but the AI is Self-Aware
+<a href="https://www.youtube.com/playlist?list=PLLLYkE3G1HED6rW-bkliHbMroHYFf4ukv">Building Marble Machine X</a>
+<a href="https://youtu.be/9vM-sZQAFDo">So You Want to Make a Sound: Introduction to Sound Design</a>
+<a href="https://youtu.be/E0OQIraSHqs">A Beginner's Guide to Soviet Animated Cinema</a>
+<a href="https://youtu.be/IrgXSfcE2OU">#194: Steven Bartlett - How to Pursue Yourself Ruthlessly and Make the Journey Back to Human</a>
+<a href="https://youtu.be/gi_ngW9cyeY">The best song in Stardew Valley?</a>
+<a href="https://www.youtube.com/watch?v=Wz6DrQeQ5rI">Learn How to Draw for Beginners - Episode 1</a>
+<a href="https://www.youtube.com/watch?v=aCgkLICTskQ">Mark Fisher : The Slow Cancellation Of The Future</a>
+<a href="https://www.youtube.com/watch?v=sxz0OWGw6qE">Designing a Magical Ecosystem</a>
+<a href="https://www.youtube.com/watch?v=y_NPuMvWlKk">I created a world building project.</a>
+<a href="https://www.youtube.com/watch?v=4VxPd3nM7vU">LOST IN TIME - The Forgotten Blade Runner Video Game</a>
+<a href="https://www.youtube.com/watch?v=Q1Tczf8vxCM">Stop Getting Lost: Make Cognitive Maps, Not Levels</a>
+<a href="https://www.youtube.com/watch?v=hg3mK1yVnWM">What's going on in Fallout Online?</a>
+<a href="https://www.youtube.com/watch?v=7I0VyXS26Dg">Limmy's BANNED Improv Scary Stories</a>
+<a href="https://www.youtube.com/watch?v=S2nxv4w4k-E">The Driver (2023) - Full EP | Podel</a>
+<a href="https://www.youtube.com/watch?v=JZRosTZHzAU">Improv story: The Roast Chicken</a> (Limmy)
+<a href="https://www.youtube.com/watch?v=5WPB2u8EzL8">How to Enjoy the End of the World</a>
+<a href="https://vimeo.com/462801161">imagine…Tales of Music and The Brain</a> [David Bruce Einaudi]
+</p>
+</div>
+</div>
+<div id="outline-container-org8bf5e97" class="outline-4">
+<h4 id="org8bf5e97"><span class="section-number-4">6.6.2.</span> comic</h4>
+<div class="outline-text-4" id="text-6-6-2">
+<p>
+Homestuck
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org240f595" class="outline-3">
+<h3 id="org240f595"><span class="section-number-3">6.7.</span> art</h3>
+<div class="outline-text-3" id="text-6-7">
+<p>
+<a href="https://www.flickr.com/people/taffeta/">https://www.flickr.com/people/taffeta/</a> (30-50s)
+<a href="https://www.flickr.com/photos/mediamolecule">https://www.flickr.com/photos/mediamolecule</a>
+<a href="https://sunecho.com">https://sunecho.com</a> (L.J. Altvater)
+<a href="https://www.deviantart.com/erictonarts/gallery">https://www.deviantart.com/erictonarts/gallery</a> (mandelbulb)
+<a href="https://twitter.com/Old_School_3D">https://twitter.com/Old_School_3D</a>
+<a href="https://www.deviantart.com/trustpixels">https://www.deviantart.com/trustpixels</a> (pixel)
+<a href="https://www.nationalgallery.org.uk">https://www.nationalgallery.org.uk</a>
+<a href="https://blenderartists.org/t/vile-metal-a-same-themed-series-of-project-that-lingered-from-the-back-of-my-head-and-dream/1421092">https://blenderartists.org/t/vile-metal-a-same-themed-series-of-project-that-lingered-from-the-back-of-my-head-and-dream/1421092</a>
+dadism
+<a href="https://blenderartists.org/t/topology-works/1216939/67">https://blenderartists.org/t/topology-works/1216939/67</a>
+Piotr Jabłoński
+<a href="https://blenderartists.org/uploads/default/original/4X/a/c/8/ac8eecd3067a3b90984c68c5848ffc488f4a0188.png">https://blenderartists.org/t/temples/1472908</a>
+<img src="https://blenderartists.org/uploads/default/original/4X/a/c/8/ac8eecd3067a3b90984c68c5848ffc488f4a0188.png" alt="ac8eecd3067a3b90984c68c5848ffc488f4a0188.png" />
+<a href="https://www.beeple-crap.com">https://www.beeple-crap.com</a>
+Claire Hummel (Valve, Campo Santo?)
+</p>
+</div>
+<div id="outline-container-orgde149b6" class="outline-4">
+<h4 id="orgde149b6"><span class="section-number-4">6.7.1.</span> animations</h4>
+<div class="outline-text-4" id="text-6-7-1">
+<p>
+MIGRATIONS by Constantin Chamski (3D Studio MAX R2 CD from 1997)
+IGORRR - VERY NOISE
+</p>
+</div>
+</div>
+<div id="outline-container-orgef66aa8" class="outline-4">
+<h4 id="orgef66aa8"><span class="section-number-4">6.7.2.</span> paintings</h4>
+<div class="outline-text-4" id="text-6-7-2">
+<p>
+Carlo Crivelli - The Annunciation, with Saint Emidius
+Die großen Fische fressen die kleinen
+Edgar Degas - Femme lisant
+<a href="https://en.wikipedia.org/wiki/Atrium_(architecture)#/media/File:Atrium_interior.jpg">A late 19th-century artist's reimagining of an atrium in a Pompeian domus</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orgf2e9d41" class="outline-4">
+<h4 id="orgf2e9d41"><span class="section-number-4">6.7.3.</span> photography</h4>
+<div class="outline-text-4" id="text-6-7-3">
+<p>
+<a href="https://www.flickr.com/photos/nasawebbtelescope">https://www.flickr.com/photos/nasawebbtelescope</a>
+<a href="https://www.deviantart.com/waylandscape">https://www.deviantart.com/waylandscape</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org7b9d754" class="outline-4">
+<h4 id="org7b9d754"><span class="section-number-4">6.7.4.</span> mark ferrari</h4>
+<div class="outline-text-4" id="text-6-7-4">
+<p>
+<a href="https://obscuritory.com/blog/seize-the-day-lives-on-as-the-living-worlds-app/">https://obscuritory.com/blog/seize-the-day-lives-on-as-the-living-worlds-app/</a>
+<a href="https://mugenguild.com/forum/topics/deep-forest-day-142665.0.html">https://mugenguild.com/forum/topics/deep-forest-day-142665.0.html</a>
+<a href="https://obscuritory.com/tag/mark-j-ferrari/">https://obscuritory.com/tag/mark-j-ferrari/</a> (heaven, living
+</p>
+</div>
+</div>
+<div id="outline-container-org2787ce5" class="outline-4">
+<h4 id="org2787ce5"><span class="section-number-4">6.7.5.</span> period</h4>
+<div class="outline-text-4" id="text-6-7-5">
+<p>
+Belle Époque  
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfc9fcaf" class="outline-3">
+<h3 id="orgfc9fcaf"><span class="section-number-3">6.8.</span> games</h3>
+<div class="outline-text-3" id="text-6-8">
+<p>
+children of a dead earth, <a href="https://store.steampowered.com/app/476530/Children_of_a_Dead_Earth">https://store.steampowered.com/app/476530/Children_of_a_Dead_Earth</a>
+eblong, <a href="https://eblong.com/">https://eblong.com/</a>, lisp text adventure
+portal prelude, <a href="http://www.portalprelude.com">http://www.portalprelude.com</a>, portal prequel mod
+silent hill 2, <a href="http://www.enhanced.townofsilenthill.com/SH2/compare.htm">http://www.enhanced.townofsilenthill.com/SH2/compare.htm</a>
+ninja gaiden
+ff7
+persona 3
+super metroid
+re4
+tekken 5
+deadly premonition
+mizzurna falls
+another world
+lost in shadow
+shadows of the dammed
+gwent roguelike
+powder toy
+mark ferrari - heaven &amp; earth
+the longing
+Electrokplankton
+Judas (Ken Levine)
+Postal
+Scribblenauts Unlimited
+Creeper World 4
+Devilutionx (diablo)
+The Anacrusis
+Marathon (Bungie)
+No One Lives Forever
+Narbacular Drop
+Dark Messiah of Might &amp; Magic
+Creatures (1996) (community)
+Pizza Tower (~wario land)
+<a href="https://github.com/TeamHypersomnia/Hypersomnia">Hypersomnia</a>
+Disco Elysium
+9: The Last Resort
+Hi-Fi RUSH
+Pseudoregalia
+Lumines: Electronic Symphony
+Painkiller
+No One Lives Forever
+Sin
+Greed Corp
+Blade Runner (point and click) + Rev
+Panzer Dragoon Saga
+Cry of Fear (HL:mod)
+DAVE THE DIVER
+Little Nightmarse prequel (mobile)
+Rag Doll Kung Fu
+Darwinia
+DEFCON
+SiN (+ episodes)
+Trackmania
+AudioSurf
+Torchlight (nostalgia)
+Dawn of War II (nostalgia)
+NARAKA: BLADEPOINT (Steam Best-seller 2021?)
+Cult of the Lamb
+Warhammer 40,000: Darktide
+Stray
+V Rising (2022 best-seller)
+DREDGE
+Time Crisis
+Karateka
+Legacy of Kain (Defiance, etc.)
+Spark the Electric Jester 3 (+ previous)
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="orgc7fa592"></a>Traditional<br />
+<div class="outline-text-5" id="text-6-8-0-1">
+<p>
+Monty Python flux
+</p>
+</div>
+</li>
+</ol>
+<div id="outline-container-orge8d8675" class="outline-4">
+<h4 id="orge8d8675"><span class="section-number-4">6.8.1.</span> studios</h4>
+<div class="outline-text-4" id="text-6-8-1">
+<p>
+dreamhaven
+Strange Scaffold
+</p>
+</div>
+</div>
+<div id="outline-container-org331ae33" class="outline-4">
+<h4 id="org331ae33"><span class="section-number-4">6.8.2.</span> non-steam</h4>
+<div class="outline-text-4" id="text-6-8-2">
+<p>
+Richard Burns Rally
+Alice
+Flipnic: Ultimate Pinball
+</p>
+</div>
+</div>
+<div id="outline-container-orgd870e17" class="outline-4">
+<h4 id="orgd870e17"><span class="section-number-4">6.8.3.</span> currently playing</h4>
+<div class="outline-text-4" id="text-6-8-3">
+<p>
+Baba Is You
+Baldur's Gate 3
+Kerbal Space Program
+METAL GEAR RISING REVENGEANCE
+Prey
+Psychonauts
+SH2
+Teardown
+The Elder Scrolls V Skyrim
+The Stanley Parable Ultra Deluxe
+Wolfenstein The Old Blood
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org944796b" class="outline-3">
+<h3 id="org944796b"><span class="section-number-3">6.9.</span> painters</h3>
+<div class="outline-text-3" id="text-6-9">
+<p>
+René Magritte
+Yves Tanguy
+Frida Kahlo
+Gerhard Richter
+</p>
+
+<p>
+kris kuksi
+</p>
+
+<p>
+Norman Rockwell
+Haddon Sundblom
+</p>
+
+<p>
+Klimt
+</p>
+
+<p>
+Charles Bronson
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org85a768b" class="outline-2">
+<h2 id="org85a768b"><span class="section-number-2">7.</span> music</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+<a href="https://en.wikipedia.org/wiki/The_Songs_Lennon_and_McCartney_Gave_Away">https://en.wikipedia.org/wiki/The_Songs_Lennon_and_McCartney_Gave_Away</a>
+<a href="https://www.bbc.co.uk/programmes/m001478k">https://www.bbc.co.uk/programmes/m001478k</a>
+<a href="https://open.spotify.com/user/pewdie">https://open.spotify.com/user/pewdie</a> workout playlist
+</p>
+</div>
+
+<div id="outline-container-org9b0a7ab" class="outline-3">
+<h3 id="org9b0a7ab"><span class="section-number-3">7.1.</span> genres</h3>
+<div class="outline-text-3" id="text-7-1">
+<p>
+dark roots (gothic country?)
+Tuvan throat singing
+</p>
+</div>
+</div>
+<div id="outline-container-org111d3ac" class="outline-3">
+<h3 id="org111d3ac"><span class="section-number-3">7.2.</span> artists</h3>
+<div class="outline-text-3" id="text-7-2">
+<p>
+Frank Ocean
+Kanye West (Kids see ghosts)
+Aphex Twin, Power Pill, The Tuss, Caustic Window, AFX, Bradley Strider, GAK, Mike &amp; Rich, Polygon Window, Universal Indicator Red)
+De La Soul
+Death Grips
+Four Tet
+BADBADNOTGOOD
+JAY-Z
+Talking Heads
+The Dream Academy
+Alarm Will Sound (Aphex Twin)
+Burial
+Massive Attack
+Wendy Carlos
+Squarepusher (Chaos A.D., +James McVinnie)
+Seefeel (AFX time to find me)
+Carbon Based Lifeforms
+Chicane
+2Pac
+David Bowie
+Pet Shop Boys
+Ghostpoet
+A Tribe Called Quest
+Adele
+Alio Die
+Vashti Bunyan (+Animal Collective)
+King Krule (Archy Marshall)
+Arovane
+Autechre
+AZ
+Belle and Sebastian
+Bill Evans (+Jim Hall)
+Bôa
+Boards of Canada
+Brian Eno (+Fripp, Harold Budd, Laraaji)
+Simon &amp; Garfunkel
+Burzum
+Clams Casino
+Common
+MF DOOM (DANGERDOOM, King Geedorah, Madvillain, Metal Fingers, NehruvianDOOM, Viktor Vaughn)
+Deltron 3030
+DJ Shadow
+Dr Dre
+Eminem
+endtransmission
+explosions in the sky
+fleetwood mac
+floex
+flying lotus
+Freddie Gibbs (+Madlib)
+George Clanton
+Gerry Mulligan (Night Lights)
+Global Communication
+Guru
+Home (Odyssey)
+a-ha
+Igneous Flame
+Janis Ian
+Jimi Hendrix
+Joanna Newsom
+Joy Division
+Julian Casablancas (+The Voidz)
+Kendrick Lamar
+Keyon Christ
+Kid Cudi
+King Crimson
+King Krule
+Lauryn Hill
+Linkin Park
+LSTRVR
+Luke Vibert
+Marcus Fjellstrom
+Margo Guryan
+Mariya Takeyuchi
+Masayoshi Takanaka
+Mike Oldfield
+Miles Davis
+Mr. Fingers
+NASA (Voyager Recordings)
+N.W.A
+Nas
+Neutral Milk Hotel
+Nirvana
+Noah Earp
+Nujabes
+Pink Floyd
+Pizzicato Five
+Portishead
+Prince
+Pusha T
+Rage Against the Machine
+Rod Stewart
+Ryo Fukui
+Sinewave (Unity Gain)
+Slint (Spiderland)
+Species of Fishes (Songs of a dumb world)
+Steve Roach (structures from silence)
+Tape
+Tears for Fears
+Teyana Taylor
+The Beach Boys
+The Beatles
+The Comet is Coming
+The Future Sound of London
+The Herbaliser (something wicked this way comes)
+The Notorious B.I.G.
+The Roots
+The The
+TOOL
+Tupperwave
+Vegyn
+Wu-Tang Clanton
+식료품groceries
+GALNERYUS
+David Firth
+Crystal Boys (Jonatan Söderström)
+El Huervo
+Fantastic Plastic Machine
+Jay Electronica
+Jun Fukamachi (Quark)
+Niall (Noclip Girl)
+Rose Bonica (Nothing Lasts Forever)
+Jarrad Wright (Big Lez)
+Midori Tanaka (Through the looking glass)
+Laurient Garnier (Laboratoire Mix [OtGZod-qIOE], Flashback [dYZEl7TVu-0])
+Farya Faraji (Ancient Music)
+Michael Levy (Lyre)
+bsd.u (late night bumps)
+3kliksphilip (+Stephenthedreamer)
+Herb Ellis &amp; Remo Palmier (Windflower)
+Shivkumar &amp; Brijbhushan
+Podel
+CasualTF2
+The KLF
+mort garson
+steven wilson
+Édith Piaf
+John Grant (Queen of Denmark, The Czars)
+Susumu Hirasawa (Prince of Key)
+Hannah Peel
+Paul Weller
+Lindisfarne
+Moloko (Do You Like My Tight Sweater)
+Lena Raine (minecraft)
+Fluke
+Everything But The Girl
+Jean-Michel Jarre
+Jan Morgenstern (blender)
+<a href="https://danosongs.com/">Dan-O</a> (Humane Rigging)
+Genesis
+Jethro Tull
+Steve Vai (Frank Zappa, Halo 2 s)
+Crosby, Still and Nash (Lionel Hutz gag)
+</p>
+</div>
+<div id="outline-container-org25e9943" class="outline-4">
+<h4 id="org25e9943"><span class="section-number-4">7.2.1.</span> not listened</h4>
+<div class="outline-text-4" id="text-7-2-1">
+<p>
+Röyksopp
+Underworld
+Archive
+Oneohtrix Point Never (Lost But Never Alone)
+Scott Walker (See You Don't Bump His Head)
+Amo Tobin
+Sun Ra
+Brian Setzer
+Jonathan Coulton (Portal)
+Jonathan Whitehead (Black Books, Nathan Barley, Peep Show)
+Skinny Puppy (Adam Curtis parody "The Loving Trap")
+Parry Gripp
+LTJ Bukem [IDM, DnB]
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd4088af" class="outline-3">
+<h3 id="orgd4088af"><span class="section-number-3">7.3.</span> albums</h3>
+<div class="outline-text-3" id="text-7-3">
+<p>
+Pudding Club - Songs Before Bed
+William Basinski - Watermusic II
+Elevator Music &#x2013; MUZAK &#x2013; Stimulus Progression
+Genesis - Supper's Ready
+Fairport Convention - Liege And Lief
+<a href="https://youtu.be/JK8ilaPZbKE">Peshay Studio Set (1996)</a>
+<a href="https://georgepunchy.bandcamp.com/album/panini-ep">https://georgepunchy.bandcamp.com/album/panini-ep</a>
+<a href="https://beigemonk.bandcamp.com/album/beige-monk-has-changed-names-and-urls">https://beigemonk.bandcamp.com/album/beige-monk-has-changed-names-and-urls</a>
+Maybeshewill - Not For The Want Of Trying
+<a href="https://uvlamprey.bandcamp.com/album/sombre-hombre">https://uvlamprey.bandcamp.com/album/sombre-hombre</a>
+Intelligent Drum &amp; Bass - Bailey
+Darwin Deez - Darwin Deez
+<a href="https://www.youtube.com/playlist?list=PL5a3UXdh_ybYVsaoqY-PId4ZvDc-NtHlF">ProbeComposer - Deep Blue</a>
+Howie B - Music For Babies
+<a href="https://www.youtube.com/watch?v=Z3m7HXeiHpg">Hiroshi Yoshimura (吉村弘) - Wet Land (1993)</a>
+Roy Montgomery - Temple IV
+</p>
+</div>
+</div>
+<div id="outline-container-org89ae8ed" class="outline-3">
+<h3 id="org89ae8ed"><span class="section-number-3">7.4.</span> mixes</h3>
+<div class="outline-text-3" id="text-7-4">
+<p>
+<a href="https://youtu.be/0LJSboJeNqw">On the Clouds (Ambient, Jungle, Jazzy, 90s DNB Mix)</a>
+<a href="https://www.youtube.com/watch?v=lcGhXr3Je5I">Halo: Reach - All "Glue" Variations</a>
+<a href="https://www.youtube.com/watch?v=FcBOaFzR9as">It was all just a bad dream</a>
+<a href="https://www.youtube.com/watch?v=BHl4NVytGpo">Aphex Twin Ambient Mix (Killing Floor)</a>
+2013 03 09 Essential Mix Atoms For Peace
+</p>
+</div>
+</div>
+<div id="outline-container-org22186ab" class="outline-3">
+<h3 id="org22186ab"><span class="section-number-3">7.5.</span> composers</h3>
+<div class="outline-text-3" id="text-7-5">
+<p>
+Vivaldi
+Erik Satie
+Ludovico Einaudi
+Chopin
+Debussy
+Beethoven
+Barber
+Brahms
+</p>
+</div>
+<div id="outline-container-orge203fa7" class="outline-4">
+<h4 id="orge203fa7"><span class="section-number-4">7.5.1.</span> games</h4>
+<div class="outline-text-4" id="text-7-5-1">
+<p>
+Jeremy Soule (Bethesda)
+Jason Hayes (Blizzard)
+Koji Kondo (Nintendo)
+Nobuo Uematsu (Square Enix)
+Battleblock Theatre
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org64d7593" class="outline-3">
+<h3 id="org64d7593"><span class="section-number-3">7.6.</span> label</h3>
+<div class="outline-text-3" id="text-7-6">
+<p>
+Analogical Force (Echo 106, Dwaallicht, D'Arcangelo, Anodyne, Guavid)
+</p>
+</div>
+</div>
+<div id="outline-container-org6fe8396" class="outline-3">
+<h3 id="org6fe8396"><span class="section-number-3">7.7.</span> songs</h3>
+<div class="outline-text-3" id="text-7-7">
+<p>
+Babylon Zoo - Spaceman
+An Angel, TLIM SHUG - Abuse Me
+ted chippington - she loves you
+bonobo - cirrus
+cocteau twins - cherry-coloured funk
+grimes - genesis
+moderat - a new error
+pulp - common people
+pulp - disco 2000
+Édith Piaf - C'est un gars
+Sous le dôme épais (Lakmé) - Léo Delibes [i-<sub>lVM7R6xc</sub>]
+nigredo - Susumu Hirasawa
+zsolt marx - fill your pages
+selerac - nair
+neil young - harvest moon
+david gray - babylon
+francoise hardy - tous les garcons et les filles
+travis - why does it always rain on me
+michel legrand - windmills of your mind (noel harrison)
+just a girl she said
+enigma - the eyes of truth
+ennio morricone - ninna nanna per adulteri
+blordow - jerma sleepin planets
+melodysheep - a glorious dawn
+Dr. Ghost - rhubarb guitar cover
+battle trance - green of winter
+OMEGAH RED - books of war
+cate le bon - Niwl y Mor
+galwad y mynydd - niwl y mor
+ArbiterBF - human sadness cover
+Múm - Hufeland [<sub>okI9LBkrWg</sub>]
+? - i o [lKDBh6CFhg8]
+kanye west - never see me again
+Yazz Ahmed - A Shoal of Souls [FQvU1cDyXgs]
+Víkingur Ólafsson - Reflection [5Vs5gMhef2Y]
+Halla Steinunn Stefánsdóttir / Halla Lovísa Loftsdóttir - Halla Steinunn Stefánsdóttir / Halla Lovísa Loftsdóttir - Hölluþula [1356545445]
+Hawes - Highgrove Suite： Goddess of the Woods [IcBTNuCr1co]
+ocarina of time - fire temple (original)
+Queen of Denmark, John Grant, Sinéad O'Conner
+better off alone - alice deejay
+Peter, Paul &amp; Mary - sometime lovin (Joe Dassin)
+harry nilsson - without you
+earthbound - your name please
+sonny and cher - i got you babe
+5th dimension - Let The Sunshine In
+unchained melody
+la vie en rose
+better off alone
+Adagio of Spartacus and Phrygia
+Ye Vagabonds - Bacach Shíol Andaí
+Hannah Peel - Reverie
+Herbie Hancock &amp; Joni Mitchell - The Man I Love
+Carlo Domeniconi - Koyunbaba, Op.19 (1st mvt)
+Leonard Cohen - Suzanne
+Donna Lewis - I Love You Always Forever
+Together in Electric Dreams
+Mike Oldfield ft. Maggie Reilly - Moonlight Shadow
+Irene Cara - Fame
+tregs - flow
+pilotredsun - dimweb
+cranberries - dreams
+paul young - everytime you go away
+chi lites - have you seen her
+dusty springfield - if you go away
+east 17 - stay another day
+Heatbeat - playing with delay
+Kirby: Super Star - Gourmet Race, Green Greens
+In the Year 2525 (Exordium &amp; Terminus)
+Donkey Kong Country - Stoned Ape Theory (Aquatic Ambience Reimagined)
+The Statler Brothers - Flowers On The Wall
+The Verve - Bitter Sweet Symphony
+black midi - The Defence
+Ms. John Soda - Hands
+Four Tet - Smile Around The Face
+Khonnor - The Stoned Night
+B. Fleischmann - The Pros Of Your Children (feat. Gloria Amesbauer)
+contriva - centipede
+El Perro Del Mar - Walk On By
+Beach House - Irene
+MuteMath - Reset
+Marconi Union - Strata
+Marcin Wasilewski Trio - Diamonds And Pearls
+Lusine Icl - Mojave
+Aquarela do Brasil
+Airto Moreira, Hugo Fattoruso -  Tombo in 7/4
+Locke'd Out Again - Michael Giacchino
+how to save a life
+The Flirtations - Nothing But A Heartache
+Patti Drew - Tell Him
+Elis Regina - Tatuagem
+Symphony No. 3, Op. 36: II. Lento e Largo - Tranquillissimo
+Po - Floating Against The Stream
+Frank Turner - Wessex Boy
+Nat King Cole - Don't Let Your Eyes Go Shopping (For Your Heart)
+Raymond Scott - Portofino 2
+Dinah Washington - What a Diff'rence a Day Makes (1959) [Cuando vuelva a tu lado (When I Return to Your Side)]
+Something Stupid - Carson and Gaile (1966)
+<a href="https://youtu.be/JiXo2RmQy6Y">Cuando Vuelva A Tu Lado/ What A Difference A Day Makes - Cyrille Aimée &amp; Michael Valeanu</a>
+Sweet Adeline
+Stone - Girl I Like the Way That You Move
+John Adams - Harmonielehre
+Stevie Wonder - Overjoyed
+Arnold Schönberg: String Quartet No. 2, op. 10
+Half-Life PS2 Menu
+Black Box Recorder- Child Psychology
+Tom &amp; Jerry - Papillon Love Song
+Spiral Staircase - More Today Than Yesterday
+The Wanted - Glad You Came
+Can You Feel the Sunshine
+P!nk - Who Knew
+Imagine Dragons - Whatever It Takes
+Psychic TV - Godstar
+Fonicular 1880 (spiderman pizza)
+William Tell Overture (horseback riding)
+Robert Hazard - Girls Just Wanna Have Fun
+Yellowman - Nobody Move Nobody Get Hurt
+Overworld (probably) - Super Mario Bros. Wonder [jnq0-01hoqQ]
+Bobby Goldsboro - Watching Scotty Grow
+Mancandy FAQ (soundtrack)
+Jonathan Coulton's Re: Your Brains
+Stevie Wonder - Sir Duke
+Joni Mitchell - Both Sides Now
+Peter, Paul &amp; Mary - Puff, the Magic Dragon
+Fisher's Hornpipe
+Yankee Doodle
+Dixie
+Patience and Prudence - Tonight You Belong To Me
+Penguin Cafe - Perpetuum Mobile
+John Rutter - The Lord is my Shepherd.
+Aram Khachaturian - Adagio of Spartacus &amp; Phrygia
+Norah Jones - Don't Know Why
+Joanna Newsom - Sprout and The Bean
+Adagio of Spartacus and Phrygia
+Talk Talk - Such a Shame
+Belinda Carlisle - Heaven Is a Place on Earth
+Bobby McFerrin - Knick Knack
+50 Cent - In Da Club
+Arctic Monkeys - No. 1 Party Anthem
+Witch Doctor
+I've Never Been In Love Before (Kimhyorin cover)
+<a href="https://www.youtube.com/watch?v=9pSQhUXPHAs">Superheaven - "Youngest Daughter"</a>
+Joji - Tick Tock
+D-Train - Misunderstanding
+Slam - This World
+<a href="https://www.youtube.com/watch?v=FExBwfQHXlE">Chuck Mangione - Feels So Good</a>
+<a href="https://www.youtube.com/watch?v=-7qND3Fwxbk">DEVILMAN SHOWERDOWN PART 2</a>
+Chitty Chitty Bang Bang - Hushabye Mountain (Dick Van Dyke)
+Richard Marx - Right Here Waiting
+<a href="https://www.youtube.com/watch?v=CnQ8N1KacJc">Green Day - Good Riddance</a>
+Basshunter - Vi sitter i Ventrilo och spelar DotA
+Garbage - Stupid Girl
+Ed Sheeran - The A Team
+Dota 2 Beta
+Code Lyoko - A World Without Danger
+<a href="https://www.youtube.com/watch?v=CwPKXUeCSgI">PKA - Let Me Hear You Say Yeah (Original 12 Inch Mix)</a>
+Tappi Iwase (?) - Metal Gear Solid Main Theme (Document Remix) [Metal Gear Solid 2: Substance Original Soundtrack - Ultimate Sorter Edition]
+<a href="https://www.youtube.com/watch?v=23Fgx21aFQw">Joe Fagin – That’s Living Alright [Limmy]​</a>
+</p>
+</div>
+<div id="outline-container-org807a1d6" class="outline-4">
+<h4 id="org807a1d6"><span class="section-number-4">7.7.1.</span> to listen</h4>
+<div class="outline-text-4" id="text-7-7-1">
+<p>
+Tears For Fears - Elemental
+<a href="https://www.youtube.com/watch?v=U_Ed7uCmFmo">PSYQUI feat. Such - don't you want me Piano Cover</a>
+<a href="https://www.youtube.com/watch?v=arehmbNotwQ">Marc Laidlaw - Sombre Hombre</a>
+Cheekface - Too Much to Ask
+<a href="https://www.youtube.com/watch?v=1Tfl6Aw42Zw">The Orb - The BBC Sessions 1989-2001</a>
+Electronic - Getting Away with It
+Ed Harrison - NEOTOKYO [ost]
+</p>
+</div>
+</div>
+<div id="outline-container-org2732b23" class="outline-4">
+<h4 id="org2732b23"><span class="section-number-4">7.7.2.</span> christmas</h4>
+<div class="outline-text-4" id="text-7-7-2">
+<p>
+mud - lonely this christmas
+kuribo98 - All I Want For Christmas Is You (Wii Shop)
+<a href="https://www.youtube.com/watch?v=EwzBjBHfDIs">MF DOOM x Cookin Soul - DOOM XMAS (full tape)</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orgd9d6d89" class="outline-4">
+<h4 id="orgd9d6d89"><span class="section-number-4">7.7.3.</span> jazz</h4>
+<div class="outline-text-4" id="text-7-7-3">
+<p>
+Chet Baker - Autumn Leaves (w/ Paul Desmond alto sax)
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org3075ef6" class="outline-3">
+<h3 id="org3075ef6"><span class="section-number-3">7.8.</span> games</h3>
+<div class="outline-text-3" id="text-7-8">
+<p>
+Valve (+Kelly Bailey, Mike Morasky)
+Metal Gear
+Nintendo (Mario, F-Zero, Zelda, DK Country, Earthbound, Pokemon Mystery Dungeon)
+Subset (Ben Prunty)
+Minecraft (C418, Lena Raine)
+Martin O'Donnel (Halo, Destiny, Echoes of the First Dreamer)
+The Last of Us (Gustavo Santaolalla)
+Hotline Miami (,2)
+Tetris Effect
+Skyrim (Jeremy Soule)
+Cuphead (Kristofer Maddigan)
+Ridge Racer 7
+Lethal League
+Toby Fox
+Deus Ex (,Conspiravision)
+Rockstar (GTAV, Red Dead Redemption (,2))
+Dirt Rally (,2)
+LittleBigPlanet (,Alternate Universe)
+Nidhogg
+RAMA
+Little Nightmares (Tobias Lilja)
+baba is you
+amanita design (questionaut, samorost) [floex]
+Little Big Planet (Daniel Pemberton,
+</p>
+</div>
+<div id="outline-container-org2a3f0f4" class="outline-4">
+<h4 id="org2a3f0f4"><span class="section-number-4">7.8.1.</span> mods</h4>
+<div class="outline-text-4" id="text-7-8-1">
+<p>
+<a href="https://www.moddb.com/mods/half-life-2-beta-minimalist-mod">Half-Life 2 Beta Minimalist Mod</a>
+<a href="https://www.moddb.com/mods/missing-information">Missing Information</a>
+Half-Life: Radial Symmetry
+<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2959389971">Rogue (csgo)</a>
+<a href="https://www.moddb.com/mods/cwth">CWTH [Chell's Way to Home]​</a>
+<a href="https://www.moddb.com/mods/portal-project-beta1">Portal: Project Beta</a>
+<a href="https://store.steampowered.com/app/244630/NEOTOKYO">NEOTOKYO (hl2)</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org48511e6" class="outline-3">
+<h3 id="org48511e6"><span class="section-number-3">7.9.</span> film</h3>
+<div class="outline-text-3" id="text-7-9">
+<p>
+Being John Malkovich
+Taxi Driver (Bernard Hermann)
+Blade Runner (Vangelis)
+Synecdoche, New York (Jon Brion)
+Ghost in the Shell (Kenji Kawai)
+John Hughes (Ferris Bueller's Day Off, Planes Trains and Automobiles)
+Satoshi Kon (Perfect Blue, Millenium Actress)
+Studio Ghibli (Spirited Away)
+John Williams (Star Wars, Empire of the Sun)
+Stanley Kubrick (Clockwork Orange)
+Truman Show (Philip Glass)
+House of Gucci
+</p>
+</div>
+</div>
+<div id="outline-container-org6c6f4fe" class="outline-3">
+<h3 id="org6c6f4fe"><span class="section-number-3">7.10.</span> tv</h3>
+<div class="outline-text-3" id="text-7-10">
+<p>
+Serial Experiments Lain
+DEVS
+severance
+</p>
+</div>
+</div>
+<div id="outline-container-orgb3e245e" class="outline-3">
+<h3 id="orgb3e245e"><span class="section-number-3">7.11.</span> spotify playlists</h3>
+<div class="outline-text-3" id="text-7-11">
+<p>
+pewdiepie
+<a href="https://soundcloud.com/markusalexei">https://soundcloud.com/markusalexei</a>
+<a href="https://soundcloud.com/zedrox">https://soundcloud.com/zedrox</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org9e71993" class="outline-3">
+<h3 id="org9e71993"><span class="section-number-3">7.12.</span> videos</h3>
+<div class="outline-text-3" id="text-7-12">
+<p>
+Four Tet - Smile Around The Face (2005)
+Slam - This World (Limmy)
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org6e7ac0b" class="outline-2">
+<h2 id="org6e7ac0b"><span class="section-number-2">8.</span> notes</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+commonplace book
+</p>
+</div>
+<div id="outline-container-orga563833" class="outline-3">
+<h3 id="orga563833"><span class="section-number-3">8.1.</span> todo</h3>
+<div class="outline-text-3" id="text-8-1">
+<p>
+job
+data
+	accounts
+		export
+		delete
+	backup
+		phone
+		pc
+posessions
+	sort
+	sell
+	repair
+	buy
+		clothes
+		notepad
+		razor
+		portable cd player
+		dt880
+</p>
+</div>
+</div>
+<div id="outline-container-orgcb877df" class="outline-3">
+<h3 id="orgcb877df"><span class="section-number-3">8.2.</span> synchronicity</h3>
+<div class="outline-text-3" id="text-8-2">
+<p>
+30/10/22 00:38
+watched "The Jizzarm - Internet Shorts" "Whang!" <a href="https://www.youtube.com/watch?v=BDUrJFTJdGw">https://www.youtube.com/watch?v=BDUrJFTJdGw</a> 
+then looking for s-video to scart on amazon found prince harry "spare" mentioning diana
+then watched <a href="https://www.youtube.com/watch?v=BR3XFcsEGu0">https://www.youtube.com/watch?v=BR3XFcsEGu0</a> blue jam banned doc sketch mentioning putting balls under arm and diana
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2479155" class="outline-3">
+<h3 id="org2479155"><span class="section-number-3">8.3.</span> aberystwyth</h3>
+<div class="outline-text-3" id="text-8-3">
+<p>
+accommodation refund
+aberconnections/abercareers account
+retake both modules averaging 68% for 1st
+mmp grade?
+382 python andy?
+12/03/2021
+guaranteed conditional offer masters 9/21
+	deadline 30/7/21
+	2:1 10% reduction in fees (1st 20%)
+15/12/2020
+12/10/2020
+rosalind account deletion jat70@aber.ac.uk
+group project blog (google?) <a href="https://james-cs22120.blogspot.com">https://james-cs22120.blogspot.com</a>
+<a href="https://support.google.com/blogger/answer/7538420?hl=en">https://support.google.com/blogger/answer/7538420?hl=en</a>
+13/02/20 group 10 pictures, and minutes request
+CHECK SEND/BIN MAILS
+grade concerns email was nice
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcd5e63f" class="outline-3">
+<h3 id="orgcd5e63f"><span class="section-number-3">8.4.</span> youtube comments</h3>
+<div class="outline-text-3" id="text-8-4">
+<p>
+<a href="https://www.youtube.com/watch?v=gEBLqCgR6hA&amp;lc=Ugw-tY2ejleMH7rPmvx4AaABAg"> This Music Is The Beat. If Kirby was real, he will set it as an Alarm Clock. XD nice Video</a>
+<a href="https://www.youtube.com/watch?v=njT82MeJVtY&amp;lc=Ugyf_S9zM0j97lo8K9N4AaABAg">thank you very much . . you tough me that there is much much  tools that i didnt know yet. and blendering world is not just the dessert full with mirage but nothing can be used to live, but there is everything i need that i just didnt notice it.</a>
+<a href="https://www.youtube.com/watch?v=h8EqMCrtLZ0&amp;lc=UgzGs_zlX0CVLcO2-1p4AaABAg.97dUE4f5aI09CQLR0al1mJ">Psychology of Fast Food and Fat</a>
+<a href="https://www.youtube.com/watch?v=rMudHClToL0&amp;lc=UgxXCwe-AJ2vum32Swt4AaABAg">A few years ago, whenever I was upset I used to play this song really loud out of my surround system. During the drum parts I would move around the house like donkey kong and just act like him and be very aggressive and get up in my family members faces. Once 00:46 kicked in I would start throwing things around and start making loud chimpanzee noises,  just going around the house flipping over chairs and throwing papers and stuff off tables and just making a huge mess of the house in minutes. My family came to dread this song whenever it played because they knew it meant one thing. Man I miss those days.</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdce4ada" class="outline-2">
+<h2 id="orgdce4ada"><span class="section-number-2">9.</span> projects</h2>
+<div class="outline-text-2" id="text-9">
+</div>
+<div id="outline-container-org0dc55ab" class="outline-3">
+<h3 id="org0dc55ab"><span class="section-number-3">9.1.</span> github</h3>
+<div class="outline-text-3" id="text-9-1">
+<p>
+<a href="https://docs.github.com/en/get-started/quickstart">https://docs.github.com/en/get-started/quickstart</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7061e25" class="outline-3">
+<h3 id="org7061e25"><span class="section-number-3">9.2.</span> emacs</h3>
+<div class="outline-text-3" id="text-9-2">
+<p>
+<a href="https://stakahama.github.io/resources/emacs/#orgheadline2">https://stakahama.github.io/resources/emacs/#orgheadline2</a>
+link to highlighted youtube comment in org mode
+<a href="https://github.com/Wilfred/helpful">https://github.com/Wilfred/helpful</a>
+Zettelkasten (Paper Machines (2002))
+Getting Things Done
+Hipster PDA
+<a href="https://en.wikipedia.org/wiki/Zettelkasten#See_also">https://en.wikipedia.org/wiki/Zettelkasten#See_also</a>
+<a href="https://en.wikipedia.org/wiki/Parietal_lobe">https://en.wikipedia.org/wiki/Parietal_lobe</a>
+<a href="https://en.wikipedia.org/wiki/Cortical_homunculus">https://en.wikipedia.org/wiki/Cortical_homunculus</a>
+</p>
+
+<p>
+<a href="https://koustuvsinha.com/post/emacs_research_workflow/">https://koustuvsinha.com/post/emacs_research_workflow/</a>
+</p>
+</div>
+<div id="outline-container-org702fb33" class="outline-4">
+<h4 id="org702fb33"><span class="section-number-4">9.2.1.</span> org</h4>
+<div class="outline-text-4" id="text-9-2-1">
+<p>
+inline image web behaviour
+</p>
+<ul class="org-ul">
+<li>url as image caption stops preview</li>
+</ul>
+</div>
+
+<ol class="org-ol">
+<li><a id="org7c6942a"></a>export template<br />
+<div class="outline-text-5" id="text-9-2-1-1">
+<p>
+replace custom shortahands (eg. local = (l) to symbol)
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgd69d818" class="outline-3">
+<h3 id="orgd69d818"><span class="section-number-3">9.3.</span> hammer</h3>
+<div class="outline-text-3" id="text-9-3">
+<p>
+<a href="https://developer.valvesoftware.com/wiki/Dimensions">https://developer.valvesoftware.com/wiki/Dimensions</a>
+<a href="https://developer.valvesoftware.com/wiki/Hammer_Hotkey_Reference">https://developer.valvesoftware.com/wiki/Hammer_Hotkey_Reference</a>
+<a href="https://developer.valvesoftware.com/wiki/Creating_Brush_Entities">https://developer.valvesoftware.com/wiki/Creating_Brush_Entities</a>
+<a href="https://www.tophattwaffle.com/mapping-workflow-keeping-your-sanity-for-the-extra-long-projects/">https://www.tophattwaffle.com/mapping-workflow-keeping-your-sanity-for-the-extra-long-projects/</a>
+<a href="https://developer.valvesoftware.com/wiki/Blender_Source_Tools">https://developer.valvesoftware.com/wiki/Blender_Source_Tools</a>
+</p>
+
+<p>
+**	modding
+<a href="https://www.youtube.com/watch?v=_JZ7bnk3oiM">https://www.youtube.com/watch?v=_JZ7bnk3oiM</a> Minecraft, But I Show You How to Code a Modded Item! - YouTube
+</p>
+</div>
+</div>
+
+<div id="outline-container-org13a811c" class="outline-3">
+<h3 id="org13a811c"><span class="section-number-3">9.4.</span> gaming</h3>
+<div class="outline-text-3" id="text-9-4">
+<p>
+<a href="https://web.archive.org/web/20120614094258/https://www.geforce.com/Optimize/Guides/deus-ex-human-revolution-tweak-guide#1">https://web.archive.org/web/20120614094258/https://www.geforce.com/Optimize/Guides/deus-ex-human-revolution-tweak-guide#1</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9111870" class="outline-3">
+<h3 id="org9111870"><span class="section-number-3">9.5.</span> fractals</h3>
+<div class="outline-text-3" id="text-9-5">
+<p>
+<a href="https://en.wikipedia.org/wiki/Fractal-generating_software">https://en.wikipedia.org/wiki/Fractal-generating_software</a>
+<a href="https://www.mandelbulb.com/">https://www.mandelbulb.com/</a>
+<a href="https://mb3d.overwhale.com/">https://mb3d.overwhale.com/</a> (mandelbulb 3d)
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfa41fb8" class="outline-3">
+<h3 id="orgfa41fb8"><span class="section-number-3">9.6.</span> blender</h3>
+<div class="outline-text-3" id="text-9-6">
+<p>
+<a href="https://www.youtube.com/watch?v=X0Z7ewe8KZ4&amp;list=PLE211C8C41F1AFBAB&amp;index=5">https://www.youtube.com/watch?v=X0Z7ewe8KZ4&amp;list=PLE211C8C41F1AFBAB&amp;index=5</a>
+<a href="https://renderman.pixar.com/community_resources">https://renderman.pixar.com/community_resources</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org10f1dce" class="outline-3">
+<h3 id="org10f1dce"><span class="section-number-3">9.7.</span> ipod video</h3>
+<div class="outline-text-3" id="text-9-7">
+<p>
+remove references to rockbox
+remove anodised finished
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb1da720" class="outline-3">
+<h3 id="orgb1da720"><span class="section-number-3">9.8.</span> nintendont</h3>
+<div class="outline-text-3" id="text-9-8">
+<p>
+custom wiimote layout
+</p>
+</div>
+</div>
+
+<div id="outline-container-org42f7b46" class="outline-3">
+<h3 id="org42f7b46"><span class="section-number-3">9.9.</span> clip jam</h3>
+<div class="outline-text-3" id="text-9-9">
+<p>
+custom firmware (upgrade.hex)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5176030" class="outline-3">
+<h3 id="org5176030"><span class="section-number-3">9.10.</span> kindle</h3>
+<div class="outline-text-3" id="text-9-10">
+<p>
+<a href="https://www.mobileread.com/forums/showthread.php?t=320564">https://www.mobileread.com/forums/showthread.php?t=320564</a>
+<a href="https://www.mobileread.com/forums/showthread.php?t=346037">https://www.mobileread.com/forums/showthread.php?t=346037</a>
+<a href="https://github.com/koreader/koreader">https://github.com/koreader/koreader</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdadab20" class="outline-3">
+<h3 id="orgdadab20"><span class="section-number-3">9.11.</span> ps2</h3>
+<div class="outline-text-3" id="text-9-11">
+<p>
+<a href="https://www.ps2-home.com/forum/viewtopic.php?f=96&amp;t=1248">https://www.ps2-home.com/forum/viewtopic.php?f=96&amp;t=1248</a>
+<a href="https://github.com/CTurt/FreeDVDBoot">https://github.com/CTurt/FreeDVDBoot</a>
+<a href="https://github.com/ps2homebrew/Open-PS2-Loader">https://github.com/ps2homebrew/Open-PS2-Loader</a>
+<a href="https://sx.sytes.net/oplcl/games.aspx">https://sx.sytes.net/oplcl/games.aspx</a>
+<a href="https://www.psx-place.com/threads/tutorial-the-great-ps2-aio-guide.30219/">https://www.psx-place.com/threads/tutorial-the-great-ps2-aio-guide.30219/</a>
+</p>
+</div>
+<div id="outline-container-org6fa5d37" class="outline-4">
+<h4 id="org6fa5d37"><span class="section-number-4">9.11.1.</span> graphics</h4>
+<div class="outline-text-4" id="text-9-11-1">
+<p>
+<a href="https://lodev.org/cgtutor/raycasting.html">https://lodev.org/cgtutor/raycasting.html</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org9903565" class="outline-3">
+<h3 id="org9903565"><span class="section-number-3">9.12.</span> shorthand</h3>
+</div>
+</div>
+<div id="outline-container-org95e302a" class="outline-2">
+<h2 id="org95e302a"><span class="section-number-2">10.</span> writing ideas</h2>
+<div class="outline-text-2" id="text-10">
+<p>
+future fashion - dazzle camouflage to stop bugs
+bodleian library
+unit 731
+pareidolia
+shorthand associated with witchcraft and magic in the middle ages
+project cumulus, rainmakers, cloudbusting
+Bombing of Rainbow Warrior
+</p>
+</div>
+<div id="outline-container-org38d2d85" class="outline-3">
+<h3 id="org38d2d85"><span class="section-number-3">10.1.</span> doing things differently</h3>
+<div class="outline-text-3" id="text-10-1">
+<p>
+Finnish toilets where you shit on a shelf
+</p>
+<ul class="org-ul">
+<li>inspection [Moss watching flush]</li>
+<li>finnish people who are scandinvian</li>
+<li>tsunami flush metaphor</li>
+</ul>
+<p>
+Emacs undoing the undo [Emacser interview sketch]
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org1c1c76f" class="outline-2">
+<h2 id="org1c1c76f"><span class="section-number-2">11.</span> reading</h2>
+<div class="outline-text-2" id="text-11">
+<p>
+wolfie linked cybersec on discord
+hugo dnd Intro.docx on discord
+</p>
+</div>
+<div id="outline-container-org1b4335d" class="outline-3">
+<h3 id="org1b4335d"><span class="section-number-3">11.1.</span> books</h3>
+<div class="outline-text-3" id="text-11-1">
+<p>
+flatland
+exit west
+alice
+ringworld
+meditations
+what is like to be a bat
+book of tibit
+guns, germs and steel
+a thousand plateaus
+Eros and magic in the Renaissance
+Atalanta Fugiens
+all tomorrows
+Snow Crash
+S. Petersen's Field Guide to Creatures of the Dreamlands
+<a href="http://leethomson.myzen.co.uk/Star_Trek/1_Original_Series/Star_Trek_Pitch.pdf">http://leethomson.myzen.co.uk/Star_Trek/1_Original_Series/Star_Trek_Pitch.pdf</a>
+Gormenghast
+make it new - ezra pound
+<a href="https://www.callofdutyzombies.com/topic/183877-the-cod-zombies-storybook/">https://www.callofdutyzombies.com/topic/183877-the-cod-zombies-storybook/</a>
+Shams al-Ma'arif
+A Voyage to Arcturus
+The Gadfly
+John Alec Baker - The Peregrine
+<a href="https://mikelynchcartoons.blogspot.com/2023/04/how-to-cartoon-book-points-on.html">https://mikelynchcartoons.blogspot.com/2023/04/how-to-cartoon-book-points-on.html</a>
+Camille Paglia - Sexual Personae
+<a href="https://i.redd.it/789p8h492tw41.jpg">Meme Analysis <i>general reading list</i></a>
+Building a Second Brain
+Heege Manuscript
+The Devil in the White City
+Heidi (Swiss)
+Lost Horizon - James Hilton
+De Spectris (1569) - Ludwig Lavater
+Bede
+Uncommon Therapy (Milton H. Erickson) <a href="https://youtu.be/_Hxg3vFb8lI">Daniel Mackler</a>
+Tarkovsky - Sculpting in Time: Reflections on the Cinema
+Herman Hess - Siddhartha
+The Wheel of Time
+Gabor Mate - The Myth of Normal (anti-psychiatry)
+Jean-Paul Sartre - Nausea
+Skyrim/ES ebooks <a href="https://www.imperial-library.info/content/forum-archives-michael-kirkbride">https://www.imperial-library.info/content/forum-archives-michael-kirkbride</a>
+Lokasenna (nordic poem)
+Stanisław Lem - The Futurological Congress
+Raising the Bar (HL)
+The WoW Diary
+The Lazarus Effect
+Ideas of Power (Adam Curtis inspiration)
+Little Nightmares Graphic Novel
+Herman Hesse - Steppenwolf
+Mike Reiss - Springfield Confidential: Jokes, Secrets and Outright Lies From a Lifetime of Writing for The Simpsons
+Matt Groening - Life in Hell
+</p>
+
+<p>
+Airport (1968)
+The Valley of the Dolls
+The Moon Is a Harsh Mistress
+</p>
+
+<p>
+Andersen's Fairy Tales
+Blindsight
+Walden
+Pearl Manuscript - Pearl, Sir Gawain and the Green Knight
+</p>
+</div>
+</div>
+<div id="outline-container-org42a016e" class="outline-3">
+<h3 id="org42a016e"><span class="section-number-3">11.2.</span> resource ebooks</h3>
+<div class="outline-text-3" id="text-11-2">
+<p>
+<a href="https://www.masteringemacs.org">https://www.masteringemacs.org</a>
+	<a href="https://www.inspiredpython.com/">https://www.inspiredpython.com/</a>
+<a href="https://www.blendersecrets.org">https://www.blendersecrets.org</a>
+</p>
+</div>
+<div id="outline-container-orgd952504" class="outline-4">
+<h4 id="orgd952504"><span class="section-number-4">11.2.1.</span> score</h4>
+<div class="outline-text-4" id="text-11-2-1">
+<p>
+<a href="https://www.otaku.co.uk/products/75196a">Mother 2</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org8fe9fdb" class="outline-4">
+<h4 id="org8fe9fdb"><span class="section-number-4">11.2.2.</span> struthless lifechanging books</h4>
+<div class="outline-text-4" id="text-11-2-2">
+<p>
+Kitchen Confidential
+My Year of Rest and Relaxation
+The Home Game
+The Gifts of Imperfect Parenting
+The Hidden Life of Trees
+Tomorrow When the War Began
+Zen the art of motorcycle maintenance
+The Book - Alan Watts
+I'm Glad My Mom Died
+Go Dog Go
+</p>
+</div>
+</div>
+<div id="outline-container-orgc6b904b" class="outline-4">
+<h4 id="orgc6b904b"><span class="section-number-4">11.2.3.</span> short</h4>
+<div class="outline-text-4" id="text-11-2-3">
+<p>
+The Machine Stops
+D.H. Lawrence - Odour of Chrysanthemums
+The Love Song of J. Alfred Prufrock
+</p>
+</div>
+</div>
+<div id="outline-container-org5584a8c" class="outline-4">
+<h4 id="org5584a8c"><span class="section-number-4">11.2.4.</span> utopian fiction</h4>
+<div class="outline-text-4" id="text-11-2-4">
+<p>
+The Epic of Gilgamesh (Utnapishtim's rest)
+The Odyssey (Elysian Fields)
+Plato/Socrates Republic
+Timaeus/Critias (Atlantis)
+Pliny's Natural History
+Lucian's True History
+history of Diodorus Siculus (Iambulus)
+Erewbon
+New Atlantis
+Christianopolis
+Mundus Alter et Idem
+Gulliver's Travels
+Brave New World
+Ape and Essence
+1984
+News From Nowhere
+New Jerusalem
+City of the Sun
+Looking Backward
+Island (Huxley)
+Lord of the Flies
+Lost Horizon
+The Coming Race
+When the Sleeper Wakes
+The Time Machine
+pillar to post
+love among the ruins
+the first men in the moon
+the man in the moon
+a source of embarassment
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc1c7e70" class="outline-3">
+<h3 id="orgc1c7e70"><span class="section-number-3">11.3.</span> manga</h3>
+<div class="outline-text-3" id="text-11-3">
+<p>
+blame
+yugioh
+berserk
+<a href="https://www.mangageko.com/reader/en/vagabond-chapter-3-eng-li/">Vagabond</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orge83cfbe" class="outline-3">
+<h3 id="orge83cfbe"><span class="section-number-3">11.4.</span> authors</h3>
+<div class="outline-text-3" id="text-11-4">
+<p>
+Robert Anton Wilson
+Kary Mullis
+Albert Robida
+jim young-ha
+marie kondo - The Life-Changing Magic of Tidying
+carl sagan
+albert robida
+René Guénon
+sean carroll
+Cabiria
+Allen Ginsberg
+Aleister Crowley
+William S. Burroughs (Cities of the Red Night)
+Jack Kerouac
+Ioan Petru Culianu (assassinated)
+Thea von Harbou (metropolis)
+Hervé This (molecular gastronomy)
+George Berkeley (immaterialism)
+Raymond Queneau (Les Fleures Bleues)
+Guillaume Apollinaire
+The Language of Creation by Matthieu Pageau
+Dialectic of Enlightment by Adorno &amp; Horkheimer
+乾 元 亨 利 貞, Zhu Youke's Secret Book, Qianyuan Henry Zhen, Five Volume
+Theodor W. Adorno (philosopher, Minima Moralia)
+Justin E.H. Smith (The Internet Is Not What You Think It Is: A History, A Philosophy, A Warning)
+Ramon Llull (1305 mechanical logic with paper)
+Gottfried Wilhelm Leibniz (polymath, Leibniz machine)
+Mark Fisher (Capitalist Realism)
+Thomas Pynchon
+Marc Laidlaw
+Victor Frankl - logotherapy
+Henry Charles Bukowski
+Alan De Benoist - On Being a Pagan
+Rudyard Kipling (The Gods of the Copybook Headings [poem])
+Thomas Gray (Ode on the Death fo a Favourite Cat, Drowned in a Tub of Goldfishes [poem])
+Patrick Curry (Tolkein analysis, and more)
+Plotinus (Neoplatonism)
+Lord Dunsany
+Wilhelm Busch
+Marie-Louise von Franz (Jungian)
+Herbert Spencer (Ghost Thoery, "Survival of the Fittest")
+</p>
+</div>
+<div id="outline-container-org46ca2a7" class="outline-4">
+<h4 id="org46ca2a7"><span class="section-number-4">11.4.1.</span> cartoonists</h4>
+<div class="outline-text-4" id="text-11-4-1">
+<p>
+Hal Robins - The Meaning of Lost and Mismatched Socks
+William Steig
+Moebius - Jean Giraud
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb646868" class="outline-3">
+<h3 id="orgb646868"><span class="section-number-3">11.5.</span> publishers</h3>
+<div class="outline-text-3" id="text-11-5">
+<p>
+<a href="https://nostarch.com/">https://nostarch.com/</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org30a3918" class="outline-3">
+<h3 id="org30a3918"><span class="section-number-3">11.6.</span> blogs</h3>
+<div class="outline-text-3" id="text-11-6">
+<p>
+<a href="https://fallingawkwardly.wordpress.com/2010/09/02/the-metaphysics-of-morrowind-part-2/">https://fallingawkwardly.wordpress.com/2010/09/02/the-metaphysics-of-morrowind-part-2/</a>
+<a href="https://www.skytopia.com/index.html">https://www.skytopia.com/index.html</a>
+<a href="https://cookieplmonster.github.io/">https://cookieplmonster.github.io/</a> (modding)
+<a href="https://lars.ingebrigtsen.no/">https://lars.ingebrigtsen.no/</a>
+<a href="https://blog.playdead.com/">https://blog.playdead.com/</a>
+<a href="http://www.paulgraham.com/index.html">http://www.paulgraham.com/index.html</a> (Y Combinator)
+<a href="https://derekyu.com/makegames/index.html">https://derekyu.com/makegames/index.html</a> (spelunky)
+<a href="https://www.grammarphobia.com/blog">https://www.grammarphobia.com/blog</a>
+<a href="https://blurbusters.com/">https://blurbusters.com/</a>
+<a href="https://beastrabban.wordpress.com/">https://beastrabban.wordpress.com/</a>
+<a href="https://the-wheatley-core.tumblr.com">https://the-wheatley-core.tumblr.com</a>
+church of the subgenius
+<a href="https://thosethingshidden.wordpress.com/">https://thosethingshidden.wordpress.com/</a>
+Sam Kriss (Idiot Joy Showland, Substack)
+<a href="https://www.bbc.co.uk/blogs/adamcurtis">https://www.bbc.co.uk/blogs/adamcurtis</a>
+<a href="https://www.robinrendle.com/">https://www.robinrendle.com/</a>
+<a href="https://nothings.org/">https://nothings.org/</a>
+<a href="https://www.jehsmith.com">https://www.jehsmith.com</a>
+<a href="https://sachachua.com">https://sachachua.com</a>
+	<a href="https://emacslife.com/">Emacs Life</a>
+	Emacs Chat
+<a href="https://urchn.org/blog/">https://urchn.org/blog/</a> (39 pages)
+<a href="https://emacsrocks.com/">https://emacsrocks.com/</a>
+<a href="http://whattheemacsd.com/">http://whattheemacsd.com/</a> (emacsrocks)
+<a href="https://www.grammarphobia.com/blog/2009/04/heads-up.html">https://www.grammarphobia.com/blog/2009/04/heads-up.html</a>
+</p>
+</div>
+<div id="outline-container-orgda99c12" class="outline-4">
+<h4 id="orgda99c12"><span class="section-number-4">11.6.1.</span> gaming</h4>
+<div class="outline-text-4" id="text-11-6-1">
+<p>
+<a href="https://www.johnsto.co.uk">Dave Johnston</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org8f36912" class="outline-3">
+<h3 id="org8f36912"><span class="section-number-3">11.7.</span> twitter</h3>
+<div class="outline-text-3" id="text-11-7">
+<p>
+AccidentalP
+mikemorasky
+NiallSnipars
+podel<sub>irl</sub>
+marco<sub>py1</sub>
+1041uuu
+Steventhedream1
+DUSKdev
+richterovertime
+heavyfortres
+thegoddisk
+Trick<sub>Siebzehn</sub>
+magicportalman
+Notch
+@depthsofwiki
+The Knox Event in Real Time
+RealBobMortimer
+</p>
+</div>
+</div>
+<div id="outline-container-org6d15114" class="outline-3">
+<h3 id="org6d15114"><span class="section-number-3">11.8.</span> articles</h3>
+<div class="outline-text-3" id="text-11-8">
+<p>
+<a href="https://daily.bandcamp.com/features/petscop-soundtrack-interview">https://daily.bandcamp.com/features/petscop-soundtrack-interview</a>
+<a href="https://jamie-wong.com/post/color/">https://jamie-wong.com/post/color/</a>
+<a href="https://en.wikipedia.org/wiki/Digital_dark_age">https://en.wikipedia.org/wiki/Digital_dark_age</a>
+<a href="https://en.wikibooks.org/wiki/Music_Theory/Scales_and_Intervals">https://en.wikibooks.org/wiki/Music_Theory/Scales_and_Intervals</a>
+<a href="https://pages.cs.wisc.edu/~remzi/Naur.pdf">https://pages.cs.wisc.edu/~remzi/Naur.pdf</a>
+<a href="https://www.sszczep.dev/blog/ray-casting-in-2d-game-engines/">https://www.sszczep.dev/blog/ray-casting-in-2d-game-engines/</a>
+<a href="https://forums.blurbusters.com/viewtopic.php?f=7&amp;t=6808">https://forums.blurbusters.com/viewtopic.php?f=7&amp;t=6808</a>
+<a href="https://theanarchistlibrary.org/library/umberto-eco-ur-fascism">https://theanarchistlibrary.org/library/umberto-eco-ur-fascism</a>
+<a href="https://utf8everywhere.org/">https://utf8everywhere.org/</a>
+<a href="https://classicalguitarshed.com/rasgueado-technique/">https://classicalguitarshed.com/rasgueado-technique/</a>
+<a href="https://en.wikipedia.org/wiki/Daguerreotype">https://en.wikipedia.org/wiki/Daguerreotype</a>
+Till Eulenspiegel's funny series
+<a href="https://www.defmacro.org/ramblings/lisp.html">https://www.defmacro.org/ramblings/lisp.html</a>
+<a href="https://en.wikipedia.org/wiki/Kuleshov_effect">https://en.wikipedia.org/wiki/Kuleshov_effect</a>
+<a href="https://nothings.org/gamedev/thief_rendering.html">https://nothings.org/gamedev/thief_rendering.html</a>
+<a href="https://the-past.com/feature/life-across-the-water-exploring-london-bridge-and-its-houses-1209-1761/">https://the-past.com/feature/life-across-the-water-exploring-london-bridge-and-its-houses-1209-1761/</a>
+<a href="https://l-m.dev/cs/softbody-dynamics-terminal/">https://l-m.dev/cs/softbody-dynamics-terminal/</a>
+<a href="https://soulsphere.org/mirrors/www.rome.ro/lee_killough/editing/visplane.shtml">https://soulsphere.org/mirrors/www.rome.ro/lee_killough/editing/visplane.shtml</a>
+<a href="https://philsci-archive.pitt.edu/20979/7/talk_archive.pdf">What We Talk About When We Talk About Mathematics</a>
+<a href="https://rarehistoricalphotos.com/bathysphere-old-photos/">https://rarehistoricalphotos.com/bathysphere-old-photos/</a>
+<a href="https://publicdomainreview.org/collection/march-of-the-intellect">https://publicdomainreview.org/collection/march-of-the-intellect</a>
+<a href="https://polyducks.co.uk/what-is-textmode/">https://polyducks.co.uk/what-is-textmode/</a>
+<a href="https://github.blog/2023-03-02-why-python-keeps-growing-explained/">https://github.blog/2023-03-02-why-python-keeps-growing-explained/</a>
+<a href="https://www.britannica.com/topic/shorthand">Shorthand History, Techniques &amp; Benefits Britannica</a>
+<a href="https://www.evalapply.org/posts/why-and-how-i-use-org-mode/index.html">Why and How I use "Org Mode" for my writing and more</a>
+<a href="https://www.chrisportela.com/garden/">https://www.chrisportela.com/garden/</a> (digital garden)
+<a href="https://publicdomainreview.org/collection/gynecological-gymnastics-from-outer-space-1895/">https://publicdomainreview.org/collection/gynecological-gymnastics-from-outer-space-1895/</a>
+<a href="https://www.wired.com/story/i-saw-the-face-of-god-in-a-tsmc-factory/">I Saw the Face of God in a Semiconductor Factory</a>
+<a href="https://librarianshipwreck.wordpress.com/2023/01/26/computers-enable-fantasies-on-the-continued-relevance-of-weizenbaums-warnings/">“Computers enable fantasies” – On the continued relevance of Weizenbaum’s warnings</a>
+<a href="https://stevelosh.com/blog/2012/10/a-modern-space-cadet/">https://stevelosh.com/blog/2012/10/a-modern-space-cadet/</a>
+<a href="https://zettelkasten.de/posts/luhmanns-zettel-translated/">https://zettelkasten.de/posts/luhmanns-zettel-translated/</a>
+<a href="https://www.bfi.org.uk/sight-and-sound/lists/adam-curtis-10-films-capture-mood-times">https://www.bfi.org.uk/sight-and-sound/lists/adam-curtis-10-films-capture-mood-times</a>
+</p>
+</div>
+<div id="outline-container-org080f0cd" class="outline-4">
+<h4 id="org080f0cd"><span class="section-number-4">11.8.1.</span> wikipedia</h4>
+<div class="outline-text-4" id="text-11-8-1">
+<p>
+<a href="https://en.wikipedia.org/wiki/Konstantin_Tsiolkovsky">https://en.wikipedia.org/wiki/Konstantin_Tsiolkovsky</a>
+<a href="https://en.wikipedia.org/wiki/Indigenous_psychology">https://en.wikipedia.org/wiki/Indigenous_psychology</a>
+Yoga<sub>nidra</sub>
+<a href="https://en.wikipedia.org/wiki/Planxty">Planxty</a>
+<a href="https://en.wikipedia.org/wiki/Allegory">Allegory</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc237e6e" class="outline-3">
+<h3 id="orgc237e6e"><span class="section-number-3">11.9.</span> redacted.ch</h3>
+<div class="outline-text-3" id="text-11-9">
+<p>
+john le carre - the night manager
+william gibson - burning chrome
+ray bradbury - farenheit 451
+harlan ellison - i have no mouth and i must scream
+william gibson - neuromancer
+robert harris - imperium
+john le carre - the russia house
+kurt vonnegut - slaughterhouse five
+</p>
+</div>
+</div>
+<div id="outline-container-orgbc35323" class="outline-3">
+<h3 id="orgbc35323"><span class="section-number-3">11.10.</span> sites</h3>
+<div class="outline-text-3" id="text-11-10">
+<p>
+<a href="https://the-monument-mythos.fandom.com/wiki/The_Monument_Mythos_Wiki">Monument Mythos</a>
+<a href="https://scp-wiki.wikidot.com/">SCP Foundation</a>
+<a href="https://www.memeanalysis.com">Meme Analysis</a>
+</p>
+</div>
+<div id="outline-container-orgcb35b52" class="outline-4">
+<h4 id="orgcb35b52"><span class="section-number-4">11.10.1.</span> instagram</h4>
+<div class="outline-text-4" id="text-11-10-1">
+<p>
+<a href="https://www.instagram.com/weta_digital">https://www.instagram.com/weta_digital</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org68fbf25" class="outline-2">
+<h2 id="org68fbf25"><span class="section-number-2">12.</span> read</h2>
+<div class="outline-text-2" id="text-12">
+<p>
+<a href="https://ckarchive.com/b/5quvh7h6ke25">The Imperfectionist: The life-changing magic of not tidying up</a>
+<a href="https://invertedpassion.com/think-from-first-principles-before-you-google-or-ask-chatgpt/">https://invertedpassion.com/think-from-first-principles-before-you-google-or-ask-chatgpt/</a>
+<a href="https://autotranslucence.com/2018/03/30/becoming-a-magician/">https://autotranslucence.com/2018/03/30/becoming-a-magician/</a>
+</p>
+</div>
+<div id="outline-container-org3e2085a" class="outline-3">
+<h3 id="org3e2085a"><span class="section-number-3">12.1.</span> quora</h3>
+<div class="outline-text-3" id="text-12-1">
+<p>
+<a href="https://qr.ae/pv5ZXE">What is a waste of time? [Pushpraj singh raghuwanshi]​</a>
+<a href="https://qr.ae/prHmND">I have wasted too much time. What do I do? [Sonull]​</a>
+<a href="https://qr.ae/prsXG0">I don't understand computer programming at all. I feel like it's so much things to learn. Any suggestions? [Marcus Geduld]​</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org7b5576c" class="outline-3">
+<h3 id="org7b5576c"><span class="section-number-3">12.2.</span> reddit</h3>
+<div class="outline-text-3" id="text-12-2">
+<p>
+<a href="https://old.reddit.com/r/nosurf/comments/9fjlp1/why_quitting_the_internet_for_about_25_years_was">why quitting the internet for about 2.5 years was the best decision in my life</a>
+<a href="https://old.reddit.com/r/ArtistLounge/comments/11k0uqe/i_feel_like_im_not_meant_to_be_an_artistdo_art/">I feel like I'm not meant to be an artist/do art but it's on my mind. What do?</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org9f2965e" class="outline-3">
+<h3 id="org9f2965e"><span class="section-number-3">12.3.</span> quotes</h3>
+<div class="outline-text-3" id="text-12-3">
+<p>
+Nothing in this world can take the place of persistence. Talent will not: nothing is more common than unsuccessful men with talent. Genius will not; unrewarded genius is almost a proverb. Education will not: the world is full of educated derelicts. Persistence and determination alone are omnipotent.
+	Calvin Coolidge
+</p>
+
+<p>
+Critics who treat 'adult' as a term of approval, instead of as a merely descriptive term, cannot be adult themselves. To be concerned about being grown up, to admire the grown up because it is grown up, to blush at the suspicion of being childish; these things are the marks of childhood and adolescence. And in childhood and adolescence they are, in moderation, healthy symptoms. Young things ought to want to grow. But to carry on into middle life or even into early manhood this concern about being adult is a mark of really arrested development. When I was ten, I read fairy tales in secret and would have been ashamed if I had been found doing so. Now that I am fifty I read them openly. When I became a man I put away childish things, including the fear of childishness and the desire to be very grown up.
+	C.S. Lewis
+#	
+<a href="https://news.ycombinator.com/item?id=34711741">I handle it by collecting quotes that tell me to knock it off. I've since started to focus on just the things I really care about:</a>
+</p>
+
+<p>
+    The purpose of knowledge is action, not knowledge.
+― Aristotle
+</p>
+
+<p>
+Knowledge isn't free. You have to pay attention  
+― Richard Feynman
+</p>
+
+<p>
+"Information is not truth"  
+― Yuval Noah Harari  
+</p>
+
+<p>
+If I were the plaything of every thought, I would be a fool, not a wise man. 
+― Rumi
+</p>
+
+<p>
+Dhamma is in your mind, not in the forest. You don't have to go and look anywhere else.
+― Ajahn Chah
+</p>
+
+<p>
+Man has set for himself the goal of conquering the world, 
+but in the process he loses his soul.
+― Alexander Solzhenitsyn
+</p>
+
+<p>
+The wise man knows the Self,  
+And he plays the game of life.  
+But the fool lives in the world  
+Like a beast of burden.  
+― Ashtavakra Gita (4―1)
+</p>
+
+<p>
+We must be true inside, true to ourselves, 
+before we can know a truth that is outside us.   
+― Thomas Merton
+</p>
+
+<p>
+Saying yes frequently is an additive strategy. Saying no is a subtractive strategy. Keep saying no to a lot of things - the negative and unimportant ones - and once in awhile, you will be left with an idea which is so compelling that it would be a screaming no-brainer 'yes'.
+</p>
+<ul class="org-ul">
+<li>unknown</li>
+</ul>
+<p>
+#	
+  Addiction is giving up everything for one thing, 
+  sobriety is giving up one thing for everything
+</p>
+
+<p>
+A preoccupation with the means is a lack of commitment to the end.
+</p>
+
+<p>
+TS Elliot quote from his work, the Rock:
+</p>
+
+<p>
+&gt; “Where is the wisdom we have lost in knowledge? Where is the knowledge we have lost in information?” 
+</p>
+
+<p>
+Pascal - All of humanity's problems stem from man's inability to sit quietly in a room alone
+</p>
+
+<p>
+We suffer from the beliefs that these things are bad. Pain is inevitable suffering is a choice. Your fighting yourself. Your mind is the real battlefield. 
+“In some way, suffering ceases to be suffering at the moment it finds a meaning, such as the meaning of a sacrifice.” Meaning can transform suffering. In attributing meaning to your suffering, you loosen its grip on your mind and body. – Victor Frankl
+</p>
+
+<p>
+To pretend, I actually do the thing: I have therefore only pretended to pretend. - Jacques Derrida
+</p>
+
+<p>
+Real programmers set the universal constants at the start such that the universe evolves to contain the disk with the data they want.
+MildBill boingboing.net
+</p>
+
+<p>
+The trick to happiness wasn't in freezing every momentary pleasure and clinging to each one, but in ensuring one's life would produce many future moments to anticipate.
+Oathbringer - Brandon Sanderson
+</p>
+
+<p>
+You cannot solve a problem with the same level of thinking that created the problem
+~ Einstein
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org2fd1040" class="outline-2">
+<h2 id="org2fd1040"><span class="section-number-2">13.</span> sites</h2>
+<div class="outline-text-2" id="text-13">
+<p>
+<a href="https://blenderartists.org">https://blenderartists.org</a>
+<a href="https://www.deviantart.com">https://www.deviantart.com</a>
+<a href="https://www.newgrounds.com">https://www.newgrounds.com</a>
+<a href="https://www.twitch.tv">https://www.twitch.tv</a>
+<a href="https://www.youtube.com">https://www.youtube.com</a>
+<a href="https://www.11secondclub.com">https://www.11secondclub.com</a>
+<a href="https://eyes.nasa.gov">https://eyes.nasa.gov</a>
+<a href="https://www.kvkvi.com">https://www.kvkvi.com</a>
+<a href="https://www.alice-in-wonderland.net">https://www.alice-in-wonderland.net</a>
+<a href="https://www.musictheory.net">https://www.musictheory.net</a>
+<a href="https://xkcd.com">https://xkcd.com</a>
+<a href="https://valvearchive.com">https://valvearchive.com</a>
+<a href="https://hacker.news">https://hacker.news</a>
+<a href="https://tcrf.net">https://tcrf.net</a>
+<a href="https://somafm.com">https://somafm.com</a>
+<a href="https://discord.com/app">https://discord.com/app</a>
+<a href="https://open.spotify.com">https://open.spotify.com</a>
+<a href="https://huggingface.co">https://huggingface.co</a>
+<a href="https://ocremix.org/">https://ocremix.org/</a>
+<a href="https://www.cartoonbrew.com/">https://www.cartoonbrew.com/</a> (Obscure Cartoon Character Spotlight: Goopy Geer)
+</p>
+</div>
+<div id="outline-container-orgc30afe6" class="outline-4">
+<h4 id="orgc30afe6"><span class="section-number-4">13.0.1.</span> docs</h4>
+<div class="outline-text-4" id="text-13-0-1">
+<p>
+<a href="https://learn.microsoft.com">https://learn.microsoft.com</a>
+<a href="https://ss64.com">https://ss64.com</a>
+<a href="https://www.emacswiki.org">https://www.emacswiki.org</a>
+<a href="https://askvg.com">https://askvg.com</a>
+	games
+blurbusters.com
+<a href="https://nopaystation.com/">https://nopaystation.com/</a>
+<a href="https://r-roms.github.io/">https://r-roms.github.io/</a>
+<a href="https://steamcommunity.com/profiles/76561198109807890/games/?tab=all">https://steamcommunity.com/profiles/76561198109807890/games/?tab=all</a>
+<a href="https://www.myabandonware.com/">https://www.myabandonware.com/</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orgded1f51" class="outline-4">
+<h4 id="orgded1f51"><span class="section-number-4">13.0.2.</span> subreddits</h4>
+<div class="outline-text-4" id="text-13-0-2">
+<p>
+<a href="https://old.reddit.com/r/replika/">https://old.reddit.com/r/replika/</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org8bd8e49" class="outline-4">
+<h4 id="org8bd8e49"><span class="section-number-4">13.0.3.</span> video archive</h4>
+<div class="outline-text-4" id="text-13-0-3">
+<p>
+<a href="https://archive.org/details/prelinger">https://archive.org/details/prelinger</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org45f0492" class="outline-2">
+<h2 id="org45f0492"><span class="section-number-2">14.</span> software</h2>
+<div class="outline-text-2" id="text-14">
+<p>
+blender
+Calibre
+chrlauncher
+Nicotine+ (soulseek)
+Rufus
+flashplayer<sub>32</sub><sub>sa</sub> (projector)
+SanDiskMP3Updater
+csound
+meshroom
+LilyPond
+<a href="https://github.com/motion-canvas/motion-canvas">https://github.com/motion-canvas/motion-canvas</a>
+<a href="https://nannou.cc/">https://nannou.cc/</a>
+TiMidity++
+Kdenlive (video editor)
+</p>
+
+<p>
+github.com/
+	ZeqMacaw/Crowbar
+</p>
+
+<p>
+	games
+Steam (depotdownloader, goldberg)
+ares,bsnes
+melonDS
+UGX Map Manager
+</p>
+
+<p>
+Wrye Bash
+DsHidMini (DualShock 3)
+HID-Wiimote
+</p>
+
+<p>
+<a href="https://web.archive.org/web/20180117014241/http://blog.metaclassofnil.com/?p=560">GeDoSaTo</a>
+</p>
+
+<p>
+	path
+ffmpeg
+yt-dlp
+mpv
+sysinternals (procexp, procmon, regjump)
+</p>
+
+<p>
+UX
+<a href="https://www.determinate.net/webdata/seg/tdfsb.html">https://www.determinate.net/webdata/seg/tdfsb.html</a>
+<a href="https://eaglemode.sourceforge.net/">https://eaglemode.sourceforge.net/</a>
+<a href="http://www.howardism.org/Technical/Emacs/new-window-manager.html">http://www.howardism.org/Technical/Emacs/new-window-manager.html</a>
+</p>
+
+<p>
+	win10
+Invoke-WebRequest -Uri "<a href="https://github.com/microsoft/winget-cli/releases/download/v1.1.12653/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle">https://github.com/microsoft/winget-cli/releases/download/v1.1.12653/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle</a>" -OutFile "C:\PS\WinGet.msixbundle"
+Add-AppxPackage "C:\PS\WinGet.msixbundle"
+</p>
+
+<p>
+sc config StorSvc start=disabled
+setx path "%path%;C:\Program Files\Emacs\emacs\bin"
+reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\notepad.exe" /v "Debugger" /t REG<sub>SZ</sub> /d "emacsclientw -na runemacs -F" /f
+</p>
+
+<p>
+<del>notepad</del> emacs for unknown file types
+reg add HKCR\Unknown\shell /d open /f
+reg delete HKCR\Unknown\shell\Open /v MultiSelectModel /f
+reg delete HKCR\Unknown\shell\Open /v ProgrammaticAccessOnly /f
+</p>
+
+<p>
+reg add HKCR\Unknown\shell\Open\command /d "C:\Program Files\Emacs\emacs\bin\emacsclientw.exe -na runemacs %1" /f
+reg delete HKCR\Unknown\shell\Open\command /v DelegateExecute /f
+</p>
+
+<p>
+<b>observations:</b>
+-file names with spaced paths open in emacs with some kind of hex coded name
+-.org (maybe non txtfile types ie. assumed program?) don't open
+-context menu edit verbs don't work (notepad def.), independently set for each?
+</p>
+
+<p>
+System Properties &gt; Device Installation Settings "No"
+ADMX templates
+</p>
+</div>
+<div id="outline-container-org93993be" class="outline-3">
+<h3 id="org93993be"><span class="section-number-3">14.1.</span> mac</h3>
+<div class="outline-text-3" id="text-14-1">
+<p>
+skhd (shortcuts)
+yabai (WM)
+shortcat (link hints)
+</p>
+</div>
+</div>
+<div id="outline-container-org04fda89" class="outline-3">
+<h3 id="org04fda89"><span class="section-number-3">14.2.</span> emacs packages</h3>
+<div class="outline-text-3" id="text-14-2">
+<p>
+<a href="https://stackoverflow.com/a/464210">https://stackoverflow.com/a/464210</a>
+paraedit.el
+SLIME
+<a href="https://github.com/emacsmirror/spray">https://github.com/emacsmirror/spray</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org8a5e3d8" class="outline-3">
+<h3 id="org8a5e3d8"><span class="section-number-3">14.3.</span> mpv archive</h3>
+<div class="outline-text-3" id="text-14-3">
+<p>
+umpv
+</p>
+</div>
+<div id="outline-container-org6ad51b3" class="outline-4">
+<h4 id="org6ad51b3"><span class="section-number-4">14.3.1.</span> scripts</h4>
+<div class="outline-text-4" id="text-14-3-1">
+<p>
+contact-sheet
+copyName
+gallery-thumbgen
+playlist-view
+SimpleHistory
+test
+youtube-search-for-newer-lua
+</p>
+</div>
+</div>
+<div id="outline-container-orgcea08b0" class="outline-4">
+<h4 id="orgcea08b0"><span class="section-number-4">14.3.2.</span> script modules</h4>
+<div class="outline-text-4" id="text-14-3-2">
+<p>
+gallery
+SimpleHistory
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org1917a6a" class="outline-3">
+<h3 id="org1917a6a"><span class="section-number-3">14.4.</span> animation</h3>
+<div class="outline-text-3" id="text-14-4">
+<p>
+Adobe Animate (or Flash?)
+TVPaint
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org91e2722" class="outline-2">
+<h2 id="org91e2722"><span class="section-number-2">15.</span> scripts</h2>
+<div class="outline-text-2" id="text-15">
+</div>
+<div id="outline-container-org78e728f" class="outline-3">
+<h3 id="org78e728f"><span class="section-number-3">15.1.</span> imagemagick</h3>
+<div class="outline-text-3" id="text-15-1">
+<p>
+convert +append in1 in2 (in3, &#x2026;) out // horizontal stitch
+</p>
+</div>
+</div>
+<div id="outline-container-org3652994" class="outline-3">
+<h3 id="org3652994"><span class="section-number-3">15.2.</span> yt-dlp</h3>
+<div class="outline-text-3" id="text-15-2">
+<p>
+&#x2013;download-sections REGEX | *time keyframe overshoot inclusive start, exclusive end
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">yt-dlp --download-sections "*8:43-9:16" -o "%(title)s [%(id)s] (%(section_start)s %(section_end)s).%(ext)s"
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org53120cd" class="outline-3">
+<h3 id="org53120cd"><span class="section-number-3">15.3.</span> ffmpeg</h3>
+<div class="outline-text-3" id="text-15-3">
+<p>
+ffmpeg -hwaccel cuda -hwaccel<sub>output</sub><sub>format</sub> cuda -f image2 -framerate 24 -pattern<sub>type</sub> glob -i *.png -c:v hevc<sub>nvenc</sub> output.mp4
+</p>
+
+<p>
+ffmpeg -hwaccel cuda -hwaccel<sub>output</sub><sub>format</sub> cuda -framerate 24 -i %04d.png -c:v hevc<sub>nvenc</sub> output.mp4
+</p>
+
+<p>
+ffmpeg -framerate 24 -i %04d.png -c:v libx264 output.mp4
+23/01/23 19:00
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org6734049" class="outline-2">
+<h2 id="org6734049"><span class="section-number-2">16.</span> people</h2>
+<div class="outline-text-2" id="text-16">
+<p>
+Joscha Bach
+Jim Keller
+</p>
+</div>
+<div id="outline-container-orgbf5174b" class="outline-3">
+<h3 id="orgbf5174b"><span class="section-number-3">16.1.</span> comedians</h3>
+<div class="outline-text-3" id="text-16-1">
+<p>
+George Burns
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org6e9e221" class="outline-2">
+<h2 id="org6e9e221"><span class="section-number-2">17.</span> food</h2>
+</div>
+<div id="outline-container-orgb1350b1" class="outline-2">
+<h2 id="orgb1350b1"><span class="section-number-2">18.</span> shoes</h2>
+<div class="outline-text-2" id="text-18">
+<p>
+Reebok Float Energy 4 | Grey/White
+</p>
+</div>
+</div>
+<div id="outline-container-orgaaf2f1e" class="outline-2">
+<h2 id="orgaaf2f1e"><span class="section-number-2">19.</span> elisp</h2>
+<div class="outline-text-2" id="text-19">
+<p>
+comments
+</p>
+<ul class="org-ul">
+<li>M-; comment/indent(TAB) appropriate type</li>
+<li>; column after code (explain line)</li>
+<li>;; code indent (block, function, program state, commenting-out)
+<ul class="org-ul">
+<li>w/o docstring: explain function, call, arguments, value interpretation</li>
+</ul></li>
+<li>;;; left margin (outliner heading)
+<ul class="org-ul">
+<li>;;;; 4 for sub, 5 for sub-sub, etc.</li>
+<li>Libraries typically have 4 top-level sections: start, commentary, code, end</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org254f9c1" class="outline-2">
+<h2 id="org254f9c1"><span class="section-number-2">20.</span> emacs</h2>
+<div class="outline-text-2" id="text-20">
+<p>
+package-delete reverse dependency
+</p>
+</div>
+</div>
+<div id="outline-container-orga4a9acd" class="outline-2">
+<h2 id="orga4a9acd"><span class="section-number-2">21.</span> org</h2>
+<div class="outline-text-2" id="text-21">
+<p>
+custom bullet points: org-superstar + css styling?, limited to 3 unordered? pointless?
+</p>
+</div>
+</div>
+<div id="outline-container-org8fe0248" class="outline-2">
+<h2 id="org8fe0248"><span class="section-number-2">22.</span> firefox</h2>
+<div class="outline-text-2" id="text-22">
+<p>
+focus tab (M-d/F6+S-TAB) C-S-arrows/nav rearrange tabs
+</p>
+
+<p>
+'Open previous windows and tabs' without 'Remember history'
+<span class="underline">History</span> &gt; Firefox will: Use custom settings for history' &gt;
+Uncheck 'Remember browing and download history' + 'Remember search and form history'
+Leave 'Clear history when Firefox closes' unchecked
+</p>
+
+<p>
+Set cookie exceptions (note INSERT), defaults set on install may break?
+sqlite3 permissions.sqlite .dump:
+PRAGMA foreign<sub>keys</sub>=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE moz<sub>perms</sub> ( id INTEGER PRIMARY KEY,origin TEXT,type TEXT,permission INTEGER,expireType INTEGER,expireTime INTEGER,modificationTime INTEGER);
+INSERT INTO moz<sub>perms</sub> VALUES(35,'https://discord.com','cookie',1,0,0,1694377666329);
+INSERT INTO moz<sub>perms</sub> VALUES(50,'https://youtube.com','cookie',1,0,0,1694456295611);
+CREATE TABLE moz<sub>hosts</sub> ( id INTEGER PRIMARY KEY,host TEXT,type TEXT,permission INTEGER,expireType INTEGER,expireTime INTEGER,modificationTime INTEGER,isInBrowserElement INTEGER);
+COMMIT;
+</p>
+
+<p>
+? shift select tabs in sidebar, remove need for native tab bar
+</p>
+</div>
+<div id="outline-container-org13405c2" class="outline-3">
+<h3 id="org13405c2"><span class="section-number-3">22.1.</span> ?</h3>
+<div class="outline-text-3" id="text-22-1">
+<ul class="org-ul">
+<li>change default searche engine with shift up down in search box or new tab page search
+also rearrange and more</li>
+<li>hotkey for firefox button? eg. Cookies and Site Data: Manage Exceptions</li>
+<li>limit memory usage (firemin?)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8eae0e7" class="outline-3">
+<h3 id="org8eae0e7"><span class="section-number-3">22.2.</span> extension</h3>
+<div class="outline-text-3" id="text-22-2">
+<p>
+button+shortcut to activate function
+</p>
+<ul class="org-ul">
+<li>list tabs</li>
+<li>reopen closed tab</li>
+<li>toggle tab overview menu (pref C-tab cycle recent + hold)</li>
+<li>close, min, max, snap left/right</li>
+<li>open browser toolbox  
+<ul class="org-ul">
+<li>open userChrome.css, userContent.css, user.js</li>
+</ul></li>
+</ul>
+<p>
+basic redirector?
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbda8457" class="outline-2">
+<h2 id="orgbda8457"><span class="section-number-2">23.</span> instruments</h2>
+<div class="outline-text-2" id="text-23">
+<p>
+bansuri
+phorminx
+recorder
+</p>
+</div>
+<div id="outline-container-orge5ca65a" class="outline-3">
+<h3 id="orge5ca65a"><span class="section-number-3">23.1.</span> piano</h3>
+<div class="outline-text-3" id="text-23-1">
+<p>
+Clair de lune
+Piano Concerto No. 2 in C minor, Op. 18
+windmills of your mind
+<a href="https://www.musicnotes.com/sheetmusic/mtd.asp?ppn=MN0223098&amp;ca=0">God only knows</a>
+Please, Please, Please Let Me Get What I Want
+Dearly Beloved
+<a href="https://www.youtube.com/watch?v=qO5GI_dws0M">Bioshock Infinite - Welcome to Columbia</a> (aka hallelujah)
+<a href="https://en.wikipedia.org/wiki/Will_the_Circle_Be_Unbroken%3F#/media/File:WillTheCircleBeUnbroken1907Hymn.png">Will the Circle Be Unbroken?</a>
+<a href="https://www.youtube.com/watch?v=62WuEA-GXpU">rising tension piano</a> <a href="https://www.youtube.com/watch?v=62WuEA-GXpU">other</a>
+Jon Brion - <a href="https://www.youtube.com/watch?v=ky7D73ACNw4">Theme (From "Eternal Sunshine of the Spotless Mind"/Score)</a>
+Jon Brion - Little Person
+Mia &amp; Sebastian's Theme by Justin Hurwitz from La La Land
+Yann Tiersen - Comptine d`un autre ete - l`apres-midi
+Michael Giacchino - Married Life (From "Up") (or stuff we did also)
+Code Lyoko - A World Without Danger
+</p>
+</div>
+<div id="outline-container-org5f4b06a" class="outline-4">
+<h4 id="org5f4b06a"><span class="section-number-4">23.1.1.</span> Super Mario Galaxy</h4>
+<div class="outline-text-4" id="text-23-1-1">
+<p>
+Star Festival
+</p>
+</div>
+</div>
+<div id="outline-container-org09c96e6" class="outline-4">
+<h4 id="org09c96e6"><span class="section-number-4">23.1.2.</span> Taioo</h4>
+<div class="outline-text-4" id="text-23-1-2">
+<p>
+The End of the World (Skeeter Davis piano cover) (Fallout 4)
+Blue Moon (Fallout: New Vegas)
+CS:GO
+Rainbow Road
+TES
+Inception - Dream is collapsing
+Left 4 Dead - The Monsters Within + Main theme
+Pokémon - Trainer Battle theme (VERY FAST)
+Zelda Breath of the Wild - Rito Village (Piano Cover)
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="orgb2865ae"></a>Portal 2<br />
+<div class="outline-text-5" id="text-23-1-2-1">
+<p>
+Reconstruting Science
+Cara Mia
+Want You Gone
+Exile Vilify
+</p>
+</div>
+</li>
+<li><a id="org62b2bd2"></a>TF2<br />
+<div class="outline-text-5" id="text-23-1-2-2">
+<p>
+Faster than a speeding bullet (Scout's theme)
+Mann Vs. Machine
+Right behind you (Spy's theme)
+A little heart to heart (Medic's theme)
+Dreams of Cruelty (Pyro's theme)
+</p>
+</div>
+</li>
+<li><a id="orgc884e9a"></a>Bioshock<br />
+<div class="outline-text-5" id="text-23-1-2-3">
+<p>
+Welcome to Rapture
+Cohen's Masterpiece
+Girls just want to have fun
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org1ae7e0a" class="outline-4">
+<h4 id="org1ae7e0a"><span class="section-number-4">23.1.3.</span> sites</h4>
+<div class="outline-text-4" id="text-23-1-3">
+<p>
+<a href="https://www.keeper1st.com/music/vgm.html">https://www.keeper1st.com/music/vgm.html</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org6a155c7" class="outline-3">
+<h3 id="org6a155c7"><span class="section-number-3">23.2.</span> guitar</h3>
+<div class="outline-text-3" id="text-23-2">
+<p>
+james brown chord
+<a href="https://www.echoesofmars.com/aphex_tabs/">Aphex Tabs</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=xNlyoGud2A0">https://www.youtube.com/watch?v=xNlyoGud2A0</a> The Transcribing Process - The Transcribing Course - Solo Guitar Lesson [TR-101]
+<a href="https://www.youtube.com/watch?v=8TtRIpMdtH0">https://www.youtube.com/watch?v=8TtRIpMdtH0</a> The Hottest Guitar Techniques of 2021
+<a href="https://www.youtube.com/playlist?list=PLXMwtXJnJ93ih6rMTN-MC-E-2oq54WbMW">https://www.youtube.com/playlist?list=PLXMwtXJnJ93ih6rMTN-MC-E-2oq54WbMW</a> OLA 14 DAYS Guitar Challenge Playlist
+s5CNvGbGVUM, 6 REASONS you SUCK at guitar!
+CAGED fretboard system
+</p>
+</div>
+
+<div id="outline-container-org5954dff" class="outline-4">
+<h4 id="org5954dff"><span class="section-number-4">23.2.1.</span> tabs</h4>
+<div class="outline-text-4" id="text-23-2-1">
+<p>
+<a href="https://www.gametabs.net/playstation-2/kingdom-hearts-2/lazy-afternoons">https://www.gametabs.net/playstation-2/kingdom-hearts-2/lazy-afternoons</a>
+<a href="https://www.gametabs.net/undertale/home">https://www.gametabs.net/undertale/home</a>
+<a href="https://www.gametabs.net/undertale/fallen-down-0">https://www.gametabs.net/undertale/fallen-down-0</a>
+<a href="https://tabs.ultimate-guitar.com/tab/norah-jones/dont-know-why-tabs-1727234">https://tabs.ultimate-guitar.com/tab/norah-jones/dont-know-why-tabs-1727234</a>
+</p>
+
+<p>
+Norah Jones - Don't Know Why
+Moon River
+At Seventeen
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org83b6e4c" class="outline-3">
+<h3 id="org83b6e4c"><span class="section-number-3">23.3.</span> DAW</h3>
+<div class="outline-text-3" id="text-23-3">
+<p>
+Valhalla Super Massive (reverb)
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfe47f93" class="outline-2">
+<h2 id="orgfe47f93"><span class="section-number-2">24.</span> Mysticism</h2>
+<div class="outline-text-2" id="text-24">
+<p>
+Sefirot - god expression in creation
+Kabbalah - Jewish
+Tarot de Marseilles (popularised)
+</p>
+</div>
+</div>
+<div id="outline-container-org6141c94" class="outline-2">
+<h2 id="org6141c94"><span class="section-number-2">25.</span> talks</h2>
+<div class="outline-text-2" id="text-25">
+<p>
+<a href="https://youtu.be/i-Ys_0Dbc0M">Staying Creative (Be Nice to the Goose)</a> (Marty O' Donnell)
+<a href="https://www.youtube.com/watch?v=iG9CE55wbtY">Do schools kill creativity? | Sir Ken Robinson</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orgcc62a5b" class="outline-2">
+<h2 id="orgcc62a5b"><span class="section-number-2">26.</span> blender</h2>
+<div class="outline-text-2" id="text-26">
+</div>
+<div id="outline-container-orgaaf40de" class="outline-3">
+<h3 id="orgaaf40de"><span class="section-number-3">26.1.</span> rename bones in selection order?</h3>
+<div class="outline-text-3" id="text-26-1">
+<ul class="org-ul">
+<li>regex: proximal.R..001 + \.R.*$," " =</li>
+<li><p>
+python:
+</p>
+<div class="org-src-container">
+<pre class="src src-python">import bpy
+for i, obj in enumerate(bpy.context.selected_objects, 1):
+    bpy.context.view_layer.objects.active = obj
+    obj.name = "object" + str(i)
+</pre>
+</div>
+<div class="org-src-container">
+<pre class="src src-python">import bpy
+for i, obj in enumerate(bpy.context.selected_bones, 1):
+obj.name = 'test' + str(i).zfill(3)
+</pre>
+</div>
+<p>
+for i in bpy.context.selected<sub>bones</sub>: print (i)
+<a href="https://docs.blender.org/api/current/info_gotcha.html#edit-bones-pose-bones-bone-bones">Gotchas: Edit Bones, Pose Bones, Bone… Bones</a>
+</p>
+
+<p>
+Manual: Name 1st middle.R.001, then name in sequence. Automate?
+</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org735413a" class="outline-2">
+<h2 id="org735413a"><span class="section-number-2">27.</span> OBS</h2>
+<div class="outline-text-2" id="text-27">
+<p>
+4:3 1440 captured at 1920 anchored left (480px space right)
+? center with 240px blackbars
+or ffmpeg crop rather than during edit (for every source)
+</p>
+
+<p>
+better default naming (obs and mpv screenshots)
+</p>
+</div>
+</div>
+<div id="outline-container-org1d2bff2" class="outline-2">
+<h2 id="org1d2bff2"><span class="section-number-2">28.</span> words</h2>
+<div class="outline-text-2" id="text-28">
+<p>
+chiaroscuro
+</p>
+</div>
+</div>
+<div id="outline-container-org8d4dfa3" class="outline-2">
+<h2 id="org8d4dfa3"><span class="section-number-2">29.</span> history/good</h2>
+<div class="outline-text-2" id="text-29">
+</div>
+<div id="outline-container-org8abea8f" class="outline-3">
+<h3 id="org8abea8f"><span class="section-number-3">29.1.</span> film</h3>
+<div class="outline-text-3" id="text-29-1">
+<p>
+Four Lions (2010)
+</p>
+</div>
+
+<div id="outline-container-orga85eb14" class="outline-4">
+<h4 id="orga85eb14"><span class="section-number-4">29.1.1.</span> audio</h4>
+<div class="outline-text-4" id="text-29-1-1">
+<p>
+Episode #2： Synchronicity w⧸ Chris Gabriel (Meme Analysis)
+yogpod
+blue jam
+</p>
+</div>
+</div>
+<div id="outline-container-orgff365a6" class="outline-4">
+<h4 id="orgff365a6"><span class="section-number-4">29.1.2.</span> youtube videos</h4>
+<div class="outline-text-4" id="text-29-1-2">
+<p>
+<a href="https://youtu.be/Ok06G7E07Ik">BBC Widescreen Digital Test Transmission - 1998</a>
+<a href="https://youtu.be/vw1Sv04YQS4">Alan Moore: Language, Writing and Magic</a>
+Clockwork 4 - NikkyyHD [CS:GO] [HvTvgj69azc]
+BLUE JAM (Banned Doc Sketch) - Chris Morris [BR3XFcsEGu0]
+Engineer likes Trains
+<a href="https://www.youtube.com/watch?v=RRKL3BwkbhE">Léo Delibes - Sous le dôme épais from Lakmé</a>
+<a href="https://www.youtube.com/watch?v=I5f7AkQIUQg">Stay Frosty [sғᴍ</a>
+<a href="https://www.youtube.com/watch?v=nmzaalWYqRo">fedorable<sub>parkour.mp4</sub></a>
+<a href="https://www.youtube.com/watch?v=3kBTeUFk5Lo">Wheatley Crab</a>
+<a href="https://www.youtube.com/watch?v=ANcqMStDyJk">Lazy Mountain</a>
+<a href="https://youtu.be/Jd3-eiid-Uw">Head Tracking for Desktop VR Displays using the WiiRemote</a>
+<a href="https://youtu.be/nsjDnYxJ0bo">Movie reconstruction from human brain activity</a>
+<a href="https://youtu.be/6FsH7RK1S2E">Vision Reconstruction</a>
+<a href="https://youtu.be/RuUSc53Xpeg">AlterEgo: Interfacing with devices through silent speech</a>
+<a href="https://youtu.be/YqmE2m3oK3Y">Basic Flamenco Techniques</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orga5472db" class="outline-4">
+<h4 id="orga5472db"><span class="section-number-4">29.1.3.</span> twitter</h4>
+<div class="outline-text-4" id="text-29-1-3">
+<p>
+<a href="https://twitter.com/PBValve/status/1657120179812290570">Ice Spice X Half Life!!!!!!!!!</a>
+<a href="https://twitter.com/AndrewHulshult/status/1625955469817745433">Andrew Hulshult - Here is a look back at tracking "Beautiful Blasphemy" from DUSK in 2018.</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org3b14a34" class="outline-4">
+<h4 id="org3b14a34"><span class="section-number-4">29.1.4.</span> clips</h4>
+<div class="outline-text-4" id="text-29-1-4">
+<p>
+its a man actually derek
+dee dee mega doo doo
+<a href="https://youtu.be/BZD3y7jiiBA?t=655">Jerma Streams - Hitman 3 VR</a>
+<a href="https://www.youtube.com/watch?v=wyT79RU1p_M">how ross would scream if he had to go through a wormhole</a>
+<a href="https://youtu.be/kDnxkBV6Ykc?t=6961">BTR: Lemon Party Carl Jung</a>
+<a href="https://youtu.be/UCbA6Ae5_Y8?t=232">Anomaly Haix University</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2023-11-02 Thu 01:06</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
